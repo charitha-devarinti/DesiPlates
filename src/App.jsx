@@ -1,6 +1,8 @@
 import { useState,useEffect } from 'react';
 
 import Header from './components/Header';
+import DishList from './components/DishList';
+
 import './App.css'
 
 const App = () => {
@@ -36,27 +38,8 @@ const App = () => {
           <Header/>
           {loading && <p>Loading...</p>}
           {error && <div>{error}</div>}
-          <div className="hero-section">
-               {
-              dishes.map((dish)=>{
-                 return(
-                     <div className='dishCard' key={dish.dishId}>
-                       <img className="dish-image" src={dish.image}/>
-                       <p><strong>Place: </strong> {dish.place}</p>
-                       <p><strong>Price: </strong>{dish.price}</p>
-                       <p><strong>Category: </strong>{dish.category}</p>
-                       <p><strong>Suggested Combo: </strong>{dish.combosBestFor}</p>
-                       <p><strong>Rating: </strong>{dish.rating}</p>
-                       <button className='add-cart-btn'>Add to Cart</button>
-
-                    </div>
-                 )
-              })
-          }
-
-          </div>
-
          
+         <DishList dishes={dishes}/>
 
         </div>
    );
