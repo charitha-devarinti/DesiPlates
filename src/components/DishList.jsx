@@ -1,8 +1,13 @@
 import DishCard from './DishComponent';
+import { useContext } from 'react';
+import { DishContext } from '../context/DishContext';
 
-const DishList = ({dishes}) => {
+const DishList = () => {
+   const {dishes,loading,error}=useContext(DishContext)
     return ( 
         <div>
+          {loading && <p>Loading...</p>}
+          {error && <div>{error}</div>}
             
           {
           <div className="hero-section">
