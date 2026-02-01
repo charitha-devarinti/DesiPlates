@@ -75,6 +75,7 @@
 .cart-logo{
     width:80px;
     border-radius: 50%;
+    cursor: pointer;
    
 }
 .cart-container{

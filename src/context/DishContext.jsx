@@ -11,7 +11,7 @@ export function DishProvider({children}){
         
     const fetchDishes= async () =>{
       try{
-         const res= await fetch('http://localhost:8000/dishes');
+         const res= await fetch('/api/dishes');
          if(!res.ok){
           throw new Error('Failed to fetch data')
          }
