@@ -35,7 +35,7 @@ export function DishProvider({children}){
   },[])
       
      return(
-        <DishContext.Provider value={{dishes,loading,error,visibleCount,showMore}}>
+        <DishContext.Provider value={{dishes,loading,error,visibleCount,showMore,setVisibleCount}}>
             {children}
         </DishContext.Provider>
      )

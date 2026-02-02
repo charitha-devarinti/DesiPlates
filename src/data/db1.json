@@ -34,7 +34,7 @@
 
   { "id": "AP16", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Kodi Guddu Pulusu", "image": "images/AP/kodi_guddu_pulusu.webp", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Dinner"], "quantity": "2 eggs", "rating": 4.3, "price": 160, "place": "Coastal Andhra", "description": "Egg tamarind curry with caramelized onions.", "isAvailable": true, "pairingIds": ["AP20"] },
 
-  { "id": "AP17", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Minapa Garelu", "image": "images/AP/vada.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Chicken Curry", "mealTime": ["Breakfast", "Snack"], "quantity": "3 pieces", "rating": 4.7, "price": 90, "place": "Visakhapatnam", "description": "Crispy deep-fried black gram donuts.", "isAvailable": true, "pairingIds": ["AP3"] },
+  { "id": "AP17", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Minapa Garelu", "image": "images/AP/minapa_garelu.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Chicken Curry", "mealTime": ["Breakfast", "Snack"], "quantity": "3 pieces", "rating": 4.7, "price": 90, "place": "Visakhapatnam", "description": "Crispy deep-fried black gram donuts.", "isAvailable": true, "pairingIds": ["AP3"] },
 
   { "id": "AP18", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Tomato Pappu", "image": "images/AP/tomato_pappu.jpeg", "category": "Curry", "diet": "veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "200g", "rating": 4.4, "price": 120, "place": "Common", "description": "Comforting lentils cooked with tangy tomatoes.", "isAvailable": true, "pairingIds": ["AP14"] },
 

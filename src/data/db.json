@@ -1,265 +1,218 @@
 {
-    "dishes": [
-        {
-            "stateId": "AP",
-            "dishId": "APC1",
-            "dishName": "Gongura Chicken Curry",
-            "image":"images/AP/gongura _chicken_ curry.avif",
-            "category": "Curry",
-            "combosBestFor": "Rice",
-            "mealTime": "Lunch/Dinner",
-            "quantity": "250g",
-            "rating": 4.7,
-            "price": 220,
-            "place": "Guntur",
-            "description": "Spicy chicken curry cooked with gongura leaves and Andhra spices.",
-            "isAvailable": true,
-            "pairingIds": [
-                "P1",
-                "P8"
-            ]
-        },
-        {
-  "stateId": "AP",
-  "dishId": "APC2",
-  "dishName": "Pappu Charu",
-  "image":"images/AP/pappu_charu.jpg",
-  "category": "Curry",
-  "combosBestFor": "Rice",
-  "mealTime": "Lunch",
-  "quantity": "200g",
-  "rating": 4.4,
-  "price": 120,
-  "place": "Vijayawada",
-  "description": "Tangy lentil curry served hot with rice.",
-  "isAvailable": true,
-  "pairingIds": ["P1"]
-},
+    "dishes":[
 
-{
-  "stateId": "AP",
-  "dishId": "APC3",
-  "dishName": "Royyala Vepudu",
-  "image":"images/AP/royala_vepudu.avif",
-  "category": "Curry",
-  "combosBestFor": "Rice",
-  "mealTime": "Dinner",
-  "quantity": "220g",
-  "rating": 4.6,
-  "price": 260,
-  "place": "Nellore",
-  "description": "Spicy prawn fry curry Andhra style.",
-  "isAvailable": true,
-  "pairingIds": ["P1", "P4"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APV2",
-  "dishName": "Bendakaya Fry",
-   "image":"images/AP/bendakaya_fry.jpg",
-  "category": "Veg",
-  "combosBestFor": "Roti",
-  "mealTime": "Lunch",
-  "quantity": "150g",
-  "rating": 4.3,
-  "price": 110,
-  "place": "Kurnool",
-  "description": "Crispy fried okra with spices.",
-  "isAvailable": true,
-  "pairingIds": ["P2", "P4"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APV3",
-  "dishName": "Cabbage Poriyal",
-   "image":"images/AP/cabbage_thoran.jpg",
-  "category": "Veg",
-  "combosBestFor": "Rice",
-  "mealTime": "Lunch",
-  "quantity": "180g",
-  "rating": 4.1,
-  "price": 100,
-  "place": "Rajahmundry",
-  "description": "Light sautéed cabbage with coconut.",
-  "isAvailable": true,
-  "pairingIds": ["P1"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APN1",
-  "dishName": "Andhra Chicken Fry",
-   "image":"images/AP/chicken_curry.avif",
-  "category": "Non-Veg",
-  "combosBestFor": "Rice",
-  "mealTime": "Dinner",
-  "quantity": "250g",
-  "rating": 4.6,
-  "price": 240,
-  "place": "Vizag",
-  "description": "Dry spicy chicken fry.",
-  "isAvailable": true,
-  "pairingIds": ["P1", "P4"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APN2",
-  "dishName": "Mutton Curry",
-   "image":"images/AP/mutton_curry.jpg",
-  "category": "Non-Veg",
-  "combosBestFor": "Roti",
-  "mealTime": "Lunch/Dinner",
-  "quantity": "250g",
-  "rating": 4.7,
-  "price": 320,
-  "place": "Anantapur",
-  "description": "Slow-cooked mutton curry.",
-  "isAvailable": true,
-  "pairingIds": ["P2", "P3"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APN3",
-  "dishName": "Fish Pulusu",
-   "image":"images/AP/fish_curry.avif",
-  "category": "Non-Veg",
-  "combosBestFor": "Rice",
-  "mealTime": "Lunch",
-  "quantity": "220g",
-  "rating": 4.5,
-  "price": 260,
-  "place": "Kakinada",
-  "description": "Tangy tamarind fish curry.",
-  "isAvailable": true,
-  "pairingIds": ["P1"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APS1",
-  "dishName": "Punugulu",
-   "image":"images/AP/punugulu.webp",
-  "category": "Snack",
-  "combosBestFor": "Chutney",
-  "mealTime": "Evening",
-  "quantity": "6 pieces",
-  "rating": 4.4,
-  "price": 60,
-  "place": "Vijayawada",
-  "description": "Deep-fried dosa batter fritters.",
-  "isAvailable": true,
-  "pairingIds": ["P5", "P6"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APS2",
-  "dishName": "Mirchi Bajji",
-   "image":"images/AP/mirchi_bajji.webp",
-  "category": "Snack",
-  "combosBestFor": "Tea",
-  "mealTime": "Evening",
-  "quantity": "2 pieces",
-  "rating": 4.6,
-  "price": 50,
-  "place": "Tirupati",
-  "description": "Stuffed chilli fritters.",
-  "isAvailable": true,
-  "pairingIds": ["P6"]
-},
-{
-  "stateId": "AP",
-  "dishId": "APS3",
-  "dishName": "Bobbatlu",
-   "image":"images/AP/bobattlu.jpg",
-  "category": "Snack",
-  "combosBestFor": "Milk",
-  "mealTime": "Breakfast",
-  "quantity": "1 piece",
-  "rating": 4.7,
-  "price": 70,
-  "place": "West Godavari",
-  "description": "Sweet stuffed flatbread.",
-  "isAvailable": true,
-  "pairingIds": ["P5"]
-},
-{
-  "stateId": "TS",
-  "dishId": "TSC1",
-  "dishName": "Hyderabadi Dalcha",
-   "image":"images/TS/hyderabad_dalcha.jpeg",
-  "category": "Curry",
-  "combosBestFor": "Rice",
-  "mealTime": "Lunch",
-  "quantity": "220g",
-  "rating": 4.6,
-  "price": 150,
-  "place": "Hyderabad",
-  "description": "Tangy lentil curry with vegetables.",
-  "isAvailable": true,
-  "pairingIds": ["P1"]
-},
-{
-  "stateId": "TS",
-  "dishId": "TSC2",
-  "dishName": "Bagara Baingan",
-  "image":"images/TS/bagara_baingan.jpg",
-  "category": "Curry",
-  "combosBestFor": "Roti/Naan",
-  "mealTime": "Dinner",
-  "quantity": "240g",
-  "rating": 4.7,
-  "price": 190,
-  "place": "Hyderabad",
-  "description": "Brinjal curry in sesame-peanut gravy.",
-  "isAvailable": true,
-  "pairingIds": ["P2", "P3"]
-},
-{
-  "stateId": "TS",
-  "dishId": "TSC3",
-  "dishName": "Hyderabadi Chicken Curry",
-  "image":"images/TS/hyderabadi_chicken_curry.jpg",
-  "category": "Curry",
-  "combosBestFor": "Rice",
-  "mealTime": "Lunch/Dinner",
-  "quantity": "250g",
-  "rating": 4.8,
-  "price": 240,
-  "place": "Hyderabad",
-  "description": "Spicy rich chicken gravy.",
-  "isAvailable": true,
-  "pairingIds": ["P1", "P3"]
-},
-{
-  "stateId": "TS",
-  "dishId": "TSV1",
-  "dishName": "Tomato Pappu",
-  "image":"images/TS/tomoato_pappu.jpeg",
-  "category": "Veg",
-  "combosBestFor": "Rice",
-  "mealTime": "Lunch",
-  "quantity": "200g",
-  "rating": 4.4,
-  "price": 120,
-  "place": "Warangal",
-  "description": "Tomato-flavored lentil curry.",
-  "isAvailable": true,
-  "pairingIds": ["P1"]
-},
-{
-  "stateId": "TS",
-  "dishId": "TSV2",
-  "dishName": "Beerakaya Curry",
-  "image":"images/TS/beerakaya_curry.jpg",
-  "category": "Veg",
-  "combosBestFor": "Roti",
-  "mealTime": "Lunch",
-  "quantity": "180g",
-  "rating": 4.2,
-  "price": 110,
-  "place": "Karimnagar",
-  "description": "Ridge gourd curry.",
-  "isAvailable": true,
-  "pairingIds": ["P2"]
-}
+     { "id": "AP1", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Pesarattu Upma", "image": "images/AP/pesarattu_upma.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Ginger Chutney", "mealTime": ["Breakfast"], "quantity": "2 pieces", "rating": 4.7, "price": 120, "place": "Vijayawada", "description": "Green gram crepe stuffed with rava upma.", "isAvailable": true, "pairingIds": ["AP15"] 
+    },
+
+  { "id": "AP2", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Gongura Mutton", "image": "images/AP/gongura_mutton.jpeg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Steamed Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.9, "price": 350, "place": "Guntur", "description": "Spicy mutton cooked with tangy sorrel leaves.", "isAvailable": true, "pairingIds": ["AP20"] },
+
+  { "id": "AP3", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Natu Kodi Kura", "image": "images/AP/natukodi_kura.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Ragi Sangati", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.8, "price": 320, "place": "Rayalaseema", "description": "Country chicken curry with fiery local spices.", "isAvailable": true, "pairingIds": ["AP4"] },
+
+  { "id": "AP4", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Ragi Sangati", "image": "images/AP/ragi_sangati.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Natu Kodi Kura", "mealTime": ["Lunch"], "quantity": "400g", "rating": 4.6, "price": 100, "place": "Chittoor", "description": "Healthy finger millet balls, a Rayalaseema staple.", "isAvailable": true, "pairingIds": ["AP3"] },
+
+  { "id": "AP5", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Nellore Chepala Pulusu", "image": "images/AP/nellore_chepala_pulusu.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "2 pieces", "rating": 4.9, "price": 280, "place": "Nellore", "description": "Traditional tangy fish tamarind curry.", "isAvailable": true, "pairingIds": ["AP20"] },
+
+  { "id": "AP6", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Dibba Rotti", "image": "images/AP/dibba_rotti.png", "category": "Breakfast", "diet": "veg", "combosBestFor": "Coconut Chutney", "mealTime": ["Breakfast", "Snack"], "quantity": "1 slice", "rating": 4.5, "price": 80, "place": "Coastal Andhra", "description": "Slow-cooked fat rice and lentil cake.", "isAvailable": true, "pairingIds": ["AP15"] },
+
+  { "id": "AP7", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Royyala Vepudu", "image": "images/AP/royyala_vepudu.webp", "category": "Fry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "250g", "rating": 4.7, "price": 310, "place": "Vizag", "description": "Spicy prawn fry with curry leaves and green chillies.", "isAvailable": true, "pairingIds": ["AP5"] },
+
+  { "id": "AP8", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Gutti Vankaya Kura", "image": "images/AP/gutti_vanakaya.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Pulasa", "mealTime": ["Lunch", "Dinner"], "quantity": "250g", "rating": 4.8, "price": 180, "place": "East Godavari", "description": "Stuffed brinjal curry in a peanut-sesame gravy.", "isAvailable": true, "pairingIds": ["AP20"] },
+
+  { "id": "AP9", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Punugulu", "image": "images/AP/punugulu.jpg", "category": "Snack", "diet": "veg", "combosBestFor": "Peanut Chutney", "mealTime": ["Snack"], "quantity": "10 pieces", "rating": 4.4, "price": 50, "place": "Vijayawada", "description": "Deep-fried small dumplings made of idli batter.", "isAvailable": true, "pairingIds": ["AP15"] },
+
+  { "id": "AP10", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Pootharekulu", "image": "images/AP/putharekulu.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "Tea", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 5.0, "price": 100, "place": "Atreyapuram", "description": "Paper-sweet wafers stuffed with jaggery and nuts.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "AP11", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Bobbatlu", "image": "images/AP/bobbatlu.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "Ghee", "mealTime": ["Snack", "Lunch"], "quantity": "2 pieces", "rating": 4.7, "price": 90, "place": "Anantapur", "description": "Sweet flatbread filled with lentil and jaggery.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "AP12", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Mirchi Bajji", "image": "images/AP/bajji.jpg", "category": "Snack", "diet": "veg", "combosBestFor": "Onions", "mealTime": ["Snack"], "quantity": "3 pieces", "rating": 4.6, "price": 60, "place": "Kurnool", "description": "Deep-fried stuffed green chilli fritters.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "AP13", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Ulavacharu", "image": "images/AP/ulavacharu.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Cream & Rice", "mealTime": ["Lunch"], "quantity": "250g", "rating": 4.9, "price": 150, "place": "Guntur", "description": "Thick horse gram soup with a smoky flavor.", "isAvailable": true, "pairingIds": ["AP20"] },
+
+  { "id": "AP14", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Avakaya Annam", "image": "images/AP/avakai_annam.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Curd", "mealTime": ["Lunch"], "quantity": "300g", "rating": 4.9, "price": 110, "place": "Nellore", "description": "Rice mixed with world-famous mango pickle.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "AP15", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Allam Pachadi", "image": "images/AP/allam_pachadi.jpg", "category": "Chutney", "diet": "veg", "combosBestFor": "Pesarattu", "mealTime": ["Breakfast"], "quantity": "50g", "rating": 4.5, "price": 30, "place": "Vijayawada", "description": "Spicy and sweet ginger chutney.", "isAvailable": true, "pairingIds": ["AP1"] },
+
+  { "id": "AP16", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Kodi Guddu Pulusu", "image": "images/AP/kodi_guddu_pulusu.webp", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Dinner"], "quantity": "2 eggs", "rating": 4.3, "price": 160, "place": "Coastal Andhra", "description": "Egg tamarind curry with caramelized onions.", "isAvailable": true, "pairingIds": ["AP20"] },
+
+  { "id": "AP17", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Minapa Garelu", "image": "images/AP/minapa_garelu.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Chicken Curry", "mealTime": ["Breakfast", "Snack"], "quantity": "3 pieces", "rating": 4.7, "price": 90, "place": "Visakhapatnam", "description": "Crispy deep-fried black gram donuts.", "isAvailable": true, "pairingIds": ["AP3"] },
+
+  { "id": "AP18", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Tomato Pappu", "image": "images/AP/tomato_pappu.jpeg", "category": "Curry", "diet": "veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "200g", "rating": 4.4, "price": 120, "place": "Common", "description": "Comforting lentils cooked with tangy tomatoes.", "isAvailable": true, "pairingIds": ["AP14"] },
+
+  { "id": "AP19", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Bommidayila Pulusu", "image": "images/AP/bommidayila_pulusu.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "2 pieces", "rating": 5.0, "price": 400, "place": "Rajahmundry", "description": "Special local fish cooked in traditional pots.", "isAvailable": true, "pairingIds": ["AP20"] },
+
+  { "id": "AP20", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Steamed Sona Masuri Rice", "image": "images/AP/steamed_sona-masuri_rice.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Any Curry", "mealTime": ["Lunch", "Dinner"], "quantity": "400g", "rating": 4.2, "price": 60, "place": "Common", "description": "Fluffy white rice, the base of every Andhra meal.", "isAvailable": true, "pairingIds": [] },
+
+  
+
+  
+  { "id": "TS1", "stateId": "TS", "state": "Telangana", "dishName": "Hyderabadi Chicken Biryani", "image": "images/TS/hyderabadi_chicken_biryani.jpg", "category": "Main Course", "diet": "non-veg", "combosBestFor": "Mirchi Ka Salan", "mealTime": ["Lunch", "Dinner"], "quantity": "500g", "rating": 5.0, "price": 380, "place": "Hyderabad", "description": "The crown jewel of Hyderabad, long-grain basmati rice cooked with marinated chicken and saffron.", "isAvailable": true, "pairingIds": ["TS15"] },
+
+  { "id": "TS2", "stateId": "TS", "state": "Telangana", "dishName": "Sarva Pindi", "image": "images/TS/sarva_pindi.jpeg", "category": "Snack", "diet": "veg", "combosBestFor": "Curd", "mealTime": ["Breakfast", "Snack"], "quantity": "1 piece", "rating": 4.6, "price": 70, "place": "Warangal", "description": "A savory pancake made with rice flour, peanuts, and chana dal.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "TS3", "stateId": "TS", "state": "Telangana", "dishName": "Mutton Dalcha", "image": "images/TS/mutton_dalcha.webp", "category": "Curry", "diet": "non-veg", "combosBestFor": "Bagara Khana", "mealTime": ["Lunch"], "quantity": "300g", "rating": 4.7, "price": 290, "place": "Hyderabad", "description": "Slow-cooked mutton with lentils and bottle gourd.", "isAvailable": true, "pairingIds": ["TS14"] },
+
+  { "id": "TS4", "stateId": "TS", "state": "Telangana", "dishName": "Sakinalu", "image": "images/TS/sakinalu.jpeg", "category": "Snack", "diet": "veg", "combosBestFor": "Tea", "mealTime": ["Snack"], "quantity": "250g", "rating": 4.8, "price": 120, "place": "Karimnagar", "description": "Traditional concentric ring-shaped snack made of rice flour and sesame seeds.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "TS5", "stateId": "TS", "state": "Telangana", "dishName": "Chepa Pulusu", "image": "images/TS/chepa_pulusu.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "2 pieces", "rating": 4.5, "price": 310, "place": "Nalgonda", "description": "Tamarind-based spicy fish curry, Telangana style.", "isAvailable": true, "pairingIds": ["TS20"] },
+
+  { "id": "TS6", "stateId": "TS", "state": "Telangana", "dishName": "Osmania Biscuits", "image": "images/TS/osmania_biscuits.jpg", "category": "Snack", "diet": "veg", "combosBestFor": "Irani Chai", "mealTime": ["Snack"], "quantity": "6 pieces", "rating": 4.9, "price": 60, "place": "Hyderabad", "description": "Famous salt-and-sweet biscuits named after the last Nizam.", "isAvailable": true, "pairingIds": ["TS16"] },
+
+  { "id": "TS7", "stateId": "TS", "state": "Telangana", "dishName": "Malidalu", "image": "images/TS/malidalu.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "Milk", "mealTime": ["Snack"], "quantity": "3 pieces", "rating": 4.4, "price": 110, "place": "Medak", "description": "Sweet balls made from leftover chapati, jaggery, and ghee.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "TS8", "stateId": "TS", "state": "Telangana", "dishName": "Golichina Mamsam", "image": "images/TS/golichina_mamsam.jpg", "category": "Fry", "diet": "non-veg", "combosBestFor": "Rumali Roti", "mealTime": ["Dinner"], "quantity": "250g", "rating": 4.8, "price": 360, "place": "Hyderabad", "description": "Fiery Telangana-style mutton fry with garlic and ginger.", "isAvailable": true, "pairingIds": ["TS19"] },
+
+  { "id": "TS9", "stateId": "TS", "state": "Telangana", "dishName": "Polelu", "image": "images/TS/polelu.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "Ghee", "mealTime": ["Snack", "Festive"], "quantity": "2 pieces", "rating": 4.7, "price": 80, "place": "Mahabubnagar", "description": "Thin, soft flatbread stuffed with sweet lentil paste.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "TS10", "stateId": "TS", "state": "Telangana", "dishName": "Pachi Pulusu", "image": "images/TS/pachi_pulusu.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Mudda Pappu", "mealTime": ["Lunch"], "quantity": "250ml", "rating": 4.3, "price": 90, "place": "Common", "description": "Uncooked tamarind soup with roasted green chillies and onions.", "isAvailable": true, "pairingIds": ["TS20"] },
+
+  { "id": "TS11", "stateId": "TS", "state": "Telangana", "dishName": "Boti Gorelu", "image": "images/TS/boti_gorelu.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Garelu", "mealTime": ["Dinner"], "quantity": "300g", "rating": 4.6, "price": 280, "place": "Nizamabad", "description": "Spiced goat tripe curry, a local delicacy.", "isAvailable": true, "pairingIds": ["AP17"] },
+
+  { "id": "TS12", "stateId": "TS", "state": "Telangana", "dishName": "Rail Palaharam", "image": "images/TS/rail_palaharam.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Chutney", "mealTime": ["Breakfast"], "quantity": "1 plate", "rating": 4.2, "price": 75, "place": "Warangal", "description": "Steamed rice flour balls tempered with mustard and chillies.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "TS13", "stateId": "TS", "state": "Telangana", "dishName": "Kura Karam Kodi", "image": "images/TS/kura_karam_kodi.jpg", "category": "Fry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.7, "price": 290, "place": "Khammam", "description": "Chicken fry tossed in a special homemade spice blend.", "isAvailable": true, "pairingIds": ["TS20"] },
+
+  { "id": "TS14", "stateId": "TS", "state": "Telangana", "dishName": "Bagara Khana", "image": "images/TS/bagara_khana.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Dalcha", "mealTime": ["Lunch"], "quantity": "400g", "rating": 4.6, "price": 140, "place": "Hyderabad", "description": "Spiced tempered rice flavored with mint and whole spices.", "isAvailable": true, "pairingIds": ["TS3"] },
+
+  { "id": "TS15", "stateId": "TS", "state": "Telangana", "dishName": "Mirchi Ka Salan", "image": "images/TS/mirchi_ka_salan.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Biryani", "mealTime": ["Lunch", "Dinner"], "quantity": "200g", "rating": 4.8, "price": 100, "place": "Hyderabad", "description": "Peanut and sesame-based green chilli curry.", "isAvailable": true, "pairingIds": ["TS1"] },
+
+  { "id": "TS16", "stateId": "TS", "state": "Telangana", "dishName": "Irani Chai", "image": "images/TS/irani_chai.jpeg", "category": "Beverage", "diet": "veg", "combosBestFor": "Osmania Biscuits", "mealTime": ["Breakfast", "Snack"], "quantity": "150ml", "rating": 5.0, "price": 25, "place": "Hyderabad", "description": "Creamy, slow-brewed milk tea from the Irani cafes.", "isAvailable": true, "pairingIds": ["TS6"] },
+
+  { "id": "TS17", "stateId": "TS", "state": "Telangana", "dishName": "Double Ka Meetha", "image": "images/TS/Double_ka_meetha.jpg", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Dinner"], "quantity": "200g", "rating": 4.9, "price": 130, "place": "Hyderabad", "description": "Fried bread slices soaked in saffron milk and sugar syrup.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "TS18", "stateId": "TS", "state": "Telangana", "dishName": "Ankapur Chicken", "image": "images/TS/ankapur_chicken.avif", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "300g", "rating": 4.9, "price": 340, "place": "Ankapur", "description": "Extremely spicy country chicken curry from the village of Ankapur.", "isAvailable": true, "pairingIds": ["TS20"] },
+
+  { "id": "TS19", "stateId": "TS", "state": "Telangana", "dishName": "Rumali Roti", "image": "images/TS/rumali_roti.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Golichina Mamsam", "mealTime": ["Dinner"], "quantity": "1 piece", "rating": 4.5, "price": 40, "place": "Hyderabad", "description": "Paper-thin, handkerchief-style soft flatbread.", "isAvailable": true, "pairingIds": ["TS8"] },
+
+  { "id": "TS20", "stateId": "TS", "state": "Telangana", "dishName": "White Rice", "image": "images/TS/white_rice.avif", "category": "Main Course", "diet": "veg", "combosBestFor": "Pachi Pulusu", "mealTime": ["Lunch", "Dinner"], "quantity": "400g", "rating": 4.0, "price": 50, "place": "Common", "description": "Plain steamed rice, the staple base for Telangana curries.", "isAvailable": true, "pairingIds": [] },
+
+
+
+  { "id": "PB1", "stateId": "PB", "state": "Punjab", "dishName": "Amritsari Kulcha", "image": "images/PB/amritsari_kulcha.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Chole", "mealTime": ["Breakfast", "Lunch"], "quantity": "2 pieces", "rating": 4.9, "price": 180, "place": "Amritsar", "description": "Crispy, layered tandoori bread stuffed with spiced potatoes and cauliflower.", "isAvailable": true, "pairingIds": ["PB2"] },
+
+  { "id": "PB2", "stateId": "PB", "state": "Punjab", "dishName": "Pindi Chole", "image": "images/PB/pindi_chana.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Bhature", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.8, "price": 210, "place": "Rawalpindi Style", "description": "Dark, spicy chickpeas cooked with a special blend of dry spices and pomegranate seeds.", "isAvailable": true, "pairingIds": ["PB3"] },
+
+  { "id": "PB3", "stateId": "PB", "state": "Punjab", "dishName": "Chole Bhature", "image": "images/PB/chole_bhature.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Lassi", "mealTime": ["Breakfast", "Lunch"], "quantity": "2 bhature", "rating": 5.0, "price": 240, "place": "Ludhiana", "description": "Classic combo of fluffy deep-fried bread and spicy chickpea curry.", "isAvailable": true, "pairingIds": ["PB16"] },
+
+  { "id": "PB4", "stateId": "PB", "state": "Punjab", "dishName": "Butter Chicken", "image": "images/PB/butter_chicken.avif", "category": "Curry", "diet": "non-veg", "combosBestFor": "Butter Naan", "mealTime": ["Dinner"], "quantity": "350g", "rating": 5.0, "price": 450, "place": "Punjab", "description": "Tandoori chicken pieces simmered in a rich, creamy tomato and butter gravy.", "isAvailable": true, "pairingIds": ["PB19"] },
+
+  { "id": "PB5", "stateId": "PB", "state": "Punjab", "dishName": "Sarson Da Saag", "image": "images/PB/saag_paneer.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Makki Di Roti", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.9, "price": 220, "place": "Rural Punjab", "description": "Slow-cooked mustard greens tempered with garlic and ghee.", "isAvailable": true, "pairingIds": ["PB6"] },
+
+  { "id": "PB6", "stateId": "PB", "state": "Punjab", "dishName": "Makki Di Roti", "image": "images/PB/makki_di_roti.avif", "category": "Main Course", "diet": "veg", "combosBestFor": "Sarson Saag", "mealTime": ["Lunch", "Dinner"], "quantity": "2 pieces", "rating": 4.7, "price": 80, "place": "Common", "description": "Yellow cornflour flatbread cooked on a griddle with ghee.", "isAvailable": true, "pairingIds": ["PB5"] },
+
+  { "id": "PB7", "stateId": "PB", "state": "Punjab", "dishName": "Dal Makhani", "image": "images/PB/dal_makhani.avif", "category": "Curry", "diet": "veg", "combosBestFor": "Jeera Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.9, "price": 280, "place": "Punjab", "description": "Black lentils and kidney beans slow-cooked for 12 hours with cream and butter.", "isAvailable": true, "pairingIds": ["PB20"] },
+
+  { "id": "PB8", "stateId": "PB", "state": "Punjab", "dishName": "Paneer Tikka", "image": "images/PB/paneer_tikka.avif", "category": "Snack", "diet": "veg", "combosBestFor": "Mint Chutney", "mealTime": ["Snack", "Dinner"], "quantity": "6 pieces", "rating": 4.7, "price": 320, "place": "Jalandhar", "description": "Marinated cottage cheese cubes grilled in a charcoal tandoor.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB9", "stateId": "PB", "state": "Punjab", "dishName": "Murgh Malai Tikka", "image": "images/PB/murgh_malai_tikka.jpg", "category": "Snack", "diet": "non-veg", "combosBestFor": "Naan", "mealTime": ["Dinner"], "quantity": "6 pieces", "rating": 4.8, "price": 380, "place": "Amritsar", "description": "Creamy, melt-in-the-mouth grilled chicken marinated in cheese and cream.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB10", "stateId": "PB", "state": "Punjab", "dishName": "Aloo Paratha", "image": "images/PB/aloo_paratha.avif", "category": "Breakfast", "diet": "veg", "combosBestFor": "Curd & Pickle", "mealTime": ["Breakfast"], "quantity": "2 pieces", "rating": 4.6, "price": 140, "place": "Common", "description": "Whole wheat bread stuffed with spicy mashed potatoes, served with white butter.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB11", "stateId": "PB", "state": "Punjab", "dishName": "Mutton Rogan Josh", "image": "images/PB/mutton_rogan_josh.avif", "category": "Curry", "diet": "non-veg", "combosBestFor": "Laccha Paratha", "mealTime": ["Dinner"], "quantity": "350g", "rating": 4.9, "price": 480, "place": "Punjab", "description": "Tender mutton cooked in a rich onion-ginger-garlic gravy with Kashmiri chillies.", "isAvailable": true, "pairingIds": ["PB12"] },
+
+  { "id": "PB12", "stateId": "PB", "state": "Punjab", "dishName": "Laccha Paratha", "image": "images/PB/laccha_paratha.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Any Curry", "mealTime": ["Lunch", "Dinner"], "quantity": "1 piece", "rating": 4.5, "price": 60, "place": "Punjab", "description": "Multi-layered flaky whole wheat bread cooked in tandoor.", "isAvailable": true, "pairingIds": ["PB11"] },
+
+  { "id": "PB13", "stateId": "PB", "state": "Punjab", "dishName": "Fish Amritsari", "image": "images/PB/fish_amritsari.webp", "category": "Snack", "diet": "non-veg", "combosBestFor": "Tartar Sauce", "mealTime": ["Snack"], "quantity": "250g", "rating": 4.7, "price": 350, "place": "Amritsar", "description": "Gram-flour coated deep-fried fish seasoned with ajwain and lemon.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB14", "stateId": "PB", "state": "Punjab", "dishName": "Kadhi Pakora", "image": "images/PB/kadhi_pakora.jpeg", "category": "Curry", "diet": "veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "350g", "rating": 4.4, "price": 190, "place": "Patiala", "description": "Tangy yogurt-based gravy with deep-fried onion fritters.", "isAvailable": true, "pairingIds": ["PB20"] },
+
+  { "id": "PB15", "stateId": "PB", "state": "Punjab", "dishName": "Pinni", "image": "images/PB/pinni.jpeg", "category": "Dessert", "diet": "veg", "combosBestFor": "Warm Milk", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 4.6, "price": 150, "place": "Common", "description": "Traditional winter sweet made of wheat flour, ghee, and dry fruits.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB16", "stateId": "PB", "state": "Punjab", "dishName": "Sweet Lassi", "image": "images/PB/lassi.webp", "category": "Beverage", "diet": "veg", "combosBestFor": "Chole Bhature", "mealTime": ["Breakfast", "Lunch"], "quantity": "300ml", "rating": 4.9, "price": 90, "place": "Punjab", "description": "Thick, churned yogurt drink topped with a thick layer of malai.", "isAvailable": true, "pairingIds": ["PB3"] },
+
+  { "id": "PB17", "stateId": "PB", "state": "Punjab", "dishName": "Gajar Ka Halwa", "image": "images/PB/gajar_halwa.png", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Dinner"], "quantity": "200g", "rating": 5.0, "price": 160, "place": "Common", "description": "Winter delicacy made from grated carrots, milk, sugar, and khoya.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB18", "stateId": "PB", "state": "Punjab", "dishName": "Rajma Chawal", "image": "images/PB/rajma_chawal.png", "category": "Main Course", "diet": "veg", "combosBestFor": "Pickle", "mealTime": ["Lunch"], "quantity": "450g", "rating": 4.8, "price": 180, "place": "Common", "description": "Red kidney beans cooked in thick tomato gravy, served with steamed rice.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "PB19", "stateId": "PB", "state": "Punjab", "dishName": "Butter Naan", "image": "images/PB/butter_naan.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Butter Chicken", "mealTime": ["Dinner"], "quantity": "1 piece", "rating": 4.6, "price": 70, "place": "Common", "description": "Soft and leavened refined flour bread cooked in a clay oven.", "isAvailable": true, "pairingIds": ["PB4"] },
+
+  { "id": "PB20", "stateId": "PB", "state": "Punjab", "dishName": "Jeera Rice", "image": "images/PB/jeera_rice.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Dal Makhani", "mealTime": ["Lunch", "Dinner"], "quantity": "400g", "rating": 4.3, "price": 140, "place": "Common", "description": "Aromatic basmati rice tempered with cumin seeds and ghee.", "isAvailable": true, "pairingIds": ["PB7"] },
+
+   
+  
+  { "id": "RJ1", "stateId": "RJ", "state": "Rajasthan", "dishName": "Dal Baati Churma", "image": "images/RJ/dal_baati.jpeg", "category": "Main Course", "diet": "veg", "combosBestFor": "Garlic Chutney", "mealTime": ["Lunch", "Dinner"], "quantity": "1 Thali", "rating": 5.0, "price": 350, "place": "Jaipur", "description": "The quintessential Rajasthani meal: hard wheat rolls (Baati) with spiced lentils (Dal) and sweet crumbled wheat (Churma).", "isAvailable": true, "pairingIds": ["RJ15"] },
+
+  { "id": "RJ2", "stateId": "RJ", "state": "Rajasthan", "dishName": "Laal Maas", "image": "images/RJ/laal_maas.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Bajra Roti", "mealTime": ["Dinner"], "quantity": "350g", "rating": 4.9, "price": 480, "place": "Udaipur", "description": "A fiery mutton curry cooked with Mathania chillies and smoked with charcoal.", "isAvailable": true, "pairingIds": ["RJ6"] },
+
+  { "id": "RJ3", "stateId": "RJ", "state": "Rajasthan", "dishName": "Gatte Ki Sabji", "image": "images/RJ/gatte_sabji.jpg", "category": "Curry", "diet": "veg", "combosBestFor": "Missi Roti", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.7, "price": 220, "place": "Jodhpur", "description": "Gram flour dumplings simmered in a tangy yogurt-based gravy.", "isAvailable": true, "pairingIds": ["RJ12"] },
+
+  { "id": "RJ4", "stateId": "RJ", "state": "Rajasthan", "dishName": "Ker Sangri", "image": "images/RJ/ker_sangri.jpeg", "category": "Main Course", "diet": "veg", "combosBestFor": "Bajra Roti", "mealTime": ["Lunch"], "quantity": "250g", "rating": 4.8, "price": 280, "place": "Bikaner", "description": "A unique desert specialty made from dried berries and beans cooked with spices.", "isAvailable": true, "pairingIds": ["RJ6"] },
+
+  { "id": "RJ5", "stateId": "RJ", "state": "Rajasthan", "dishName": "Pyaaz Kachori", "image": "images/RJ/pyaaz_kachori.webp", "category": "Snack", "diet": "veg", "combosBestFor": "Sweet Chutney", "mealTime": ["Breakfast", "Snack"], "quantity": "2 pieces", "rating": 4.9, "price": 80, "place": "Jodhpur", "description": "Deep-fried pastry stuffed with a spicy onion filling. A legendary breakfast.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "RJ6", "stateId": "RJ", "state": "Rajasthan", "dishName": "Bajra Roti", "image": "images/RJ/bajra_roti.png", "category": "Main Course", "diet": "veg", "combosBestFor": "Laal Maas", "mealTime": ["Lunch", "Dinner"], "quantity": "1 piece", "rating": 4.6, "price": 50, "place": "Rural Rajasthan", "description": "Hearty pearl millet flatbread, typically topped with a dollop of white butter.", "isAvailable": true, "pairingIds": ["RJ2", "RJ4"] },
+
+  { "id": "RJ7", "stateId": "RJ", "state": "Rajasthan", "dishName": "Safed Maas", "image": "images/RJ/safed_maas.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Naan", "mealTime": ["Dinner"], "quantity": "350g", "rating": 4.7, "price": 460, "place": "Mewar", "description": "A royal mutton curry cooked in a white gravy of yogurt, cream, and nuts.", "isAvailable": true, "pairingIds": ["PB19"] },
+
+  { "id": "RJ8", "stateId": "RJ", "state": "Rajasthan", "dishName": "Mirchi Bada", "image": "images/RJ/mirchi_bada.jpg", "category": "Snack", "diet": "veg", "combosBestFor": "Green Chutney", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 4.5, "price": 60, "place": "Jodhpur", "description": "Spicy chilli fritters stuffed with potato masala and deep-fried.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "RJ9", "stateId": "RJ", "state": "Rajasthan", "dishName": "Rajasthani Kadhi", "image": "images/RJ/raj_kadhi.webp", "category": "Curry", "diet": "veg", "combosBestFor": "Steamed Rice", "mealTime": ["Lunch"], "quantity": "300g", "rating": 4.4, "price": 180, "place": "Common", "description": "Spicier and thinner than Punjabi Kadhi, made with buttermilk and gram flour.", "isAvailable": true, "pairingIds": ["TS20"] },
+
+  { "id": "RJ10", "stateId": "RJ", "state": "Rajasthan", "dishName": "Ghevar", "image": "images/RJ/ghevar.jpg", "category": "Dessert", "diet": "veg", "combosBestFor": "Rabri", "mealTime": ["Snack"], "quantity": "250g", "rating": 5.0, "price": 280, "place": "Jaipur", "description": "Disc-shaped honeycomb sweet cake soaked in sugar syrup.", "isAvailable": true, "pairingIds": ["RJ11"] },
+
+  { "id": "RJ11", "stateId": "RJ", "state": "Rajasthan", "dishName": "Rabri", "image": "images/RJ/rabri.jpg", "category": "Dessert", "diet": "veg", "combosBestFor": "Ghevar", "mealTime": ["Dinner", "Snack"], "quantity": "150g", "rating": 4.8, "price": 150, "place": "Common", "description": "Condensed milk-based dish with layers of malai and dry fruits.", "isAvailable": true, "pairingIds": ["RJ10"] },
+
+  { "id": "RJ12", "stateId": "RJ", "state": "Rajasthan", "dishName": "Missi Roti", "image": "images/RJ/missi_roti.jpeg", "category": "Main Course", "diet": "veg", "combosBestFor": "Gatte Ki Sabji", "mealTime": ["Lunch", "Dinner"], "quantity": "1 piece", "rating": 4.6, "price": 60, "place": "Common", "description": "Flatbread made from a mix of gram flour and whole wheat, flavored with kasuri methi.", "isAvailable": true, "pairingIds": ["RJ3"] },
+
+  { "id": "RJ13", "stateId": "RJ", "state": "Rajasthan", "dishName": "Mohanthal", "image": "images/RJ/mohanthal.jpg", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 4.7, "price": 140, "place": "Bikaner", "description": "Gram flour fudge flavored with saffron and cardamom.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "RJ14", "stateId": "RJ", "state": "Rajasthan", "dishName": "Jungli Maas", "image": "images/RJ/jungli_maas.jpeg", "category": "Main Course", "diet": "non-veg", "combosBestFor": "Bajra Roti", "mealTime": ["Dinner"], "quantity": "350g", "rating": 4.8, "price": 450, "place": "Princely States", "description": "A rustic hunter's recipe cooked with just five ingredients: meat, ghee, salt, chillies, and water.", "isAvailable": true, "pairingIds": ["RJ6"] },
+
+  { "id": "RJ15", "stateId": "RJ", "state": "Rajasthan", "dishName": "Lehsun Ki Chutney", "image": "images/RJ/garlic_chutney.jpeg", "category": "Chutney", "diet": "veg", "combosBestFor": "Dal Baati", "mealTime": ["Lunch", "Dinner"], "quantity": "50g", "rating": 4.9, "price": 40, "place": "Common", "description": "Extremely spicy raw garlic and red chilli chutney.", "isAvailable": true, "pairingIds": ["RJ1"] },
+
+  { "id": "RJ16", "stateId": "RJ", "state": "Rajasthan", "dishName": "Mawa Kachori", "image": "images/RJ/mawa_kachori.jpeg", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Snack"], "quantity": "1 piece", "rating": 4.8, "price": 110, "place": "Jodhpur", "description": "A sweet version of kachori stuffed with khoya and dipped in sugar syrup.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "RJ17", "stateId": "RJ", "state": "Rajasthan", "dishName": "Papad Ki Sabji", "image": "images/RJ/papad_sabji.jpeg", "category": "Curry", "diet": "veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "250g", "rating": 4.2, "price": 160, "place": "Common", "description": "Roasted papads simmered in a yogurt gravy—a quick desert meal.", "isAvailable": true, "pairingIds": ["TS20"] },
+
+  { "id": "RJ18", "stateId": "RJ", "state": "Rajasthan", "dishName": "Bikaneri Bhujia", "image": "images/RJ/bhujia.jpg", "category": "Snack", "diet": "veg", "combosBestFor": "Tea", "mealTime": ["Snack"], "quantity": "100g", "rating": 5.0, "price": 60, "place": "Bikaner", "description": "The world-famous crispy snack made from moth beans and gram flour.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "RJ19", "stateId": "RJ", "state": "Rajasthan", "dishName": "Bajra Khichdi", "image": "images/RJ/bajra_khichdi.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Kadhee", "mealTime": ["Dinner"], "quantity": "400g", "rating": 4.6, "price": 140, "place": "Rural Rajasthan", "description": "Wholesome millet porridge cooked with moong dal and lots of ghee.", "isAvailable": true, "pairingIds": ["RJ9"] },
+
+  { "id": "RJ20", "stateId": "RJ", "state": "Rajasthan", "dishName": "Kalakand", "image": "images/RJ/kalakand.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 4.9, "price": 120, "place": "Alwar", "description": "A grainy milk cake made with solidified milk and sugar.", "isAvailable": true, "pairingIds": [] },
+
+
+
+  
+  { "id": "KL1", "stateId": "KL", "state": "Kerala", "dishName": "Appam with Vegetable Stew", "image": "images/KL/appam_stew.jpeg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Coconut Milk", "mealTime": ["Breakfast"], "quantity": "2 pieces", "rating": 4.9, "price": 180, "place": "Kochi", "description": "Lacy rice pancakes with a soft center, served with a mild, creamy coconut milk gravy.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL2", "stateId": "KL", "state": "Kerala", "dishName": "Malabar Parotta", "image": "images/KL/parotta.jpeg", "category": "Main Course", "diet": "veg", "combosBestFor": "Beef Fry", "mealTime": ["Lunch", "Dinner"], "quantity": "2 pieces", "rating": 5.0, "price": 60, "place": "Kozhikode", "description": "Layered, flaky flatbread made from refined flour, a street food legend.", "isAvailable": true, "pairingIds": ["KL3"] },
+
+  { "id": "KL3", "stateId": "KL", "state": "Kerala", "dishName": "Kerala Beef Fry (Ularthiyathu)", "image": "images/KL/beef_fry.jpeg", "category": "Fry", "diet": "non-veg", "combosBestFor": "Malabar Parotta", "mealTime": ["Lunch", "Dinner"], "quantity": "250g", "rating": 4.9, "price": 280, "place": "Kottayam", "description": "Slow-roasted beef chunks with coconut slices and aromatic spices.", "isAvailable": true, "pairingIds": ["KL2"] },
+
+  { "id": "KL4", "stateId": "KL", "state": "Kerala", "dishName": "Karimeen Pollichathu", "image": "images/KL/karimeen.jpeg", "category": "Fry", "diet": "non-veg", "combosBestFor": "Steamed Rice", "mealTime": ["Lunch"], "quantity": "1 piece", "rating": 4.8, "price": 450, "place": "Alleppey", "description": "Pearl spot fish marinated in spices, wrapped in banana leaves, and grilled.", "isAvailable": true, "pairingIds": ["KL20"] },
+
+  { "id": "KL5", "stateId": "KL", "state": "Kerala", "dishName": "Puttu and Kadala Curry", "image": "images/KL/puttu_kadala.jpeg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Banana", "mealTime": ["Breakfast"], "quantity": "1 plate", "rating": 4.7, "price": 120, "place": "Thrissur", "description": "Steamed rice flour cylinders with coconut, served with spicy black chickpeas.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL6", "stateId": "KL", "state": "Kerala", "dishName": "Thalassery Biryani", "image": "images/KL/thalassery_biryani.jpeg", "category": "Main Course", "diet": "non-veg", "combosBestFor": "Date Pickle", "mealTime": ["Lunch"], "quantity": "500g", "rating": 4.9, "price": 320, "place": "Thalassery", "description": "Unique biryani made with short-grain Khaima rice, fried onions, and ghee.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL7", "stateId": "KL", "state": "Kerala", "dishName": "Fish Moilee", "image": "images/KL/fish_moilee.jpeg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Appam", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.8, "price": 350, "place": "Kuttanad", "description": "A mild, yellow fish curry cooked in coconut milk with ginger and turmeric.", "isAvailable": true, "pairingIds": ["KL1"] },
+
+  { "id": "KL8", "stateId": "KL", "state": "Kerala", "dishName": "Avial", "image": "images/KL/avial.jpeg", "category": "Curry", "diet": "veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "250g", "rating": 4.6, "price": 160, "place": "Common", "description": "A thick mixture of 13 vegetables and coconut, seasoned with coconut oil.", "isAvailable": true, "pairingIds": ["KL20"] },
+
+  { "id": "KL9", "stateId": "KL", "state": "Kerala", "dishName": "Kerala Prawn Roast", "image": "images/KL/prawn_roast.jpeg", "category": "Fry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "250g", "rating": 4.7, "price": 380, "place": "Coastal Kerala", "description": "Prawns cooked in a thick masala of onions, tomatoes, and kokum.", "isAvailable": true, "pairingIds": ["KL20"] },
+
+  { "id": "KL10", "stateId": "KL", "state": "Kerala", "dishName": "Palada Payasam", "image": "images/KL/payasam.jpeg", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Dinner", "Festive"], "quantity": "200ml", "rating": 5.0, "price": 110, "place": "Common", "description": "Sweet rice flake pudding cooked in slow-reduced milk.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL11", "stateId": "KL", "state": "Kerala", "dishName": "Unnakkaya", "image": "images/KL/unnakkaya.webp", "category": "Snack", "diet": "veg", "combosBestFor": "Tea", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 4.5, "price": 80, "place": "Malabar", "description": "Spindle-shaped steamed banana treats stuffed with coconut and sugar.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL12", "stateId": "KL", "state": "Kerala", "dishName": "Banana Chips (Nenthra Kaaya)", "image": "images/KL/banana_chips.jpeg", "category": "Snack", "diet": "veg", "combosBestFor": "None", "mealTime": ["Snack"], "quantity": "200g", "rating": 4.9, "price": 100, "place": "Common", "description": "Crispy thin slices of raw banana fried in pure coconut oil.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL13", "stateId": "KL", "state": "Kerala", "dishName": "Idiyappam", "image": "images/KL/idiyappam.jpeg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Egg Roast", "mealTime": ["Breakfast"], "quantity": "3 pieces", "rating": 4.6, "price": 90, "place": "Common", "description": "String hoppers made from rice flour dough pressed into noodles and steamed.", "isAvailable": true, "pairingIds": ["KL14"] },
+
+  { "id": "KL14", "stateId": "KL", "state": "Kerala", "dishName": "Kerala Egg Roast", "image": "images/KL/egg_roast.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Idiyappam", "mealTime": ["Breakfast", "Dinner"], "quantity": "2 eggs", "rating": 4.4, "price": 140, "place": "Common", "description": "Boiled eggs in a spicy, caramelized onion and tomato gravy.", "isAvailable": true, "pairingIds": ["KL13"] },
+
+  { "id": "KL15", "stateId": "KL", "state": "Kerala", "dishName": "Parippu Vada", "image": "images/KL/parippu_vada.jpeg", "category": "Snack", "diet": "veg", "combosBestFor": "Kattan Chay (Black Tea)", "mealTime": ["Snack"], "quantity": "3 pieces", "rating": 4.7, "price": 50, "place": "Street Food", "description": "Crunchy deep-fried lentil patties with ginger and green chillies.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL16", "stateId": "KL", "state": "Kerala", "dishName": "Kozhikodan Halwa", "image": "images/KL/halwa.jpeg", "category": "Dessert", "diet": "veg", "combosBestFor": "None", "mealTime": ["Snack"], "quantity": "250g", "rating": 4.8, "price": 150, "place": "Kozhikode", "description": "Famous jelly-like halwa made from flour, coconut oil, and sugar.", "isAvailable": true, "pairingIds": [] },
+
+  { "id": "KL17", "stateId": "KL", "state": "Kerala", "dishName": "Erissery", "image": "images/KL/erissery.jpeg", "category": "Curry", "diet": "veg", "combosBestFor": "Rice", "mealTime": ["Lunch"], "quantity": "250g", "rating": 4.3, "price": 130, "place": "Palakkad", "description": "Pumpkin and black-eyed pea curry with a roasted coconut tempering.", "isAvailable": true, "pairingIds": ["KL20"] },
+
+  { "id": "KL18", "stateId": "KL", "state": "Kerala", "dishName": "Nadan Kozhi Curry", "image": "images/KL/chicken_curry.jpeg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.7, "price": 260, "place": "Rural Kerala", "description": "Spicy country-style chicken curry with thick coconut milk.", "isAvailable": true, "pairingIds": ["KL20"] },
+
+  { "id": "KL19", "stateId": "KL", "state": "Kerala", "dishName": "Pazham Pori", "image": "images/KL/pazham_pori.jpeg", "category": "Snack", "diet": "veg", "combosBestFor": "Tea", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 4.9, "price": 40, "place": "Common", "description": "Ripe banana fritters coated in a light flour batter and deep-fried.", "isAvailable": true, "pairingIds": [] },
+  
+  { "id": "KL20", "stateId": "KL", "state": "Kerala", "dishName": "Kerala Matta Rice", "image": "images/KL/matta_rice.jpeg", "category": "Main Course", "diet": "veg", "combosBestFor": "Any Curry", "mealTime": ["Lunch"], "quantity": "400g", "rating": 4.4, "price": 70, "place": "Common", "description": "Nutritious, bold red parboiled rice unique to Kerala.", "isAvailable": true, "pairingIds": [] }
+
+
 
 
     ]
