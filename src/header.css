@@ -44,6 +44,17 @@
     
 }
 
+.clear-search{
+    
+    background-color: rgb(199, 199, 199,0.7);
+    padding:3px 8px;
+    margin-right:5px;
+    border-radius: 20px;
+    color:grey;
+    cursor:pointer;
+    
+}
+
 
 .search-btn{
     margin-left:10px;

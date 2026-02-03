@@ -10,7 +10,7 @@ body{
 }
 
 .hero-section{
-  padding-top:100px;
+  padding-top:10px;
   display: grid;
   grid-template-columns:repeat(4,1fr);
   align-items: start;

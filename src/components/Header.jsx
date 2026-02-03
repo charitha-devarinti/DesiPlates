@@ -1,6 +1,21 @@
 import '../header.css'
+import { useState,useContext} from 'react';
+import { DishContext } from '../context/DishContext';
 
 const Header = () => {
+    const {setUserInput}=useContext(DishContext);
+    const [inputValue,setInputValue]=useState('')
+   
+
+   const  handleSearch=()=>{
+        setUserInput(inputValue)
+        
+    }
+
+    const  handleClearInput=()=>{
+      setInputValue('');
+    }
+
     return ( 
         <div className="header">
              <div>
@@ -8,8 +23,9 @@ const Header = () => {
                 
                </div>
                 <div className='search-area'>
-                     <input type="text" placeholder="Search for the dish..." className='input-search'/>
-                    <button className='search-btn'>
+                     <input type="text" placeholder="Search for the dish..." className='input-search' onChange={(e)=>setInputValue(e.target.value)} value={inputValue} />
+                     <span className='clear-search' onClick={handleClearInput}>X</span>
+                    <button className='search-btn' onClick={handleSearch}>
                         Search
                    </button>
                    
@@ -17,16 +33,18 @@ const Header = () => {
                 <div>
                   <label htmlFor='place' className='place-label'>Sort By Place:</label>
                   <select id='place'>
+                     <option>Select state----</option>
                      <option>Andhra Pradesh</option>
                      <option>Telangana</option>
-                     <option>Panjab</option>
-                     <option>Gujarat</option>
-                     <option>Bengali</option>
+                     <option>Punjab</option>
+                     <option>Rajasthan</option>
+                     <option>Kerala</option>
                   </select>
                 </div>
                 <div>
                   <label htmlFor='meal' className='meal-label'>Meal-Time Filter:</label>
                   <select id='meal'>
+                     <option> Select meal---</option>
                      <option>Breakfast</option>
                      <option>Lunch</option>
                      <option>Snack</option>

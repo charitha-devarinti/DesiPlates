@@ -3,10 +3,10 @@
 
      { "id": "AP1", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Pesarattu Upma", "image": "images/AP/pesarattu_upma.jpg", "category": "Breakfast", "diet": "veg", "combosBestFor": "Ginger Chutney", "mealTime": ["Breakfast"], "quantity": "2 pieces", "rating": 4.7, "price": 120, "place": "Vijayawada", "description": "Green gram crepe stuffed with rava upma.", "isAvailable": true, "pairingIds": ["AP15"] 
     },
+   
+  
 
-  { "id": "AP2", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Gongura Mutton", "image": "images/AP/gongura_mutton.jpeg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Steamed Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.9, "price": 350, "place": "Guntur", "description": "Spicy mutton cooked with tangy sorrel leaves.", "isAvailable": true, "pairingIds": ["AP20"] },
-
-  { "id": "AP3", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Natu Kodi Kura", "image": "images/AP/natukodi_kura.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Ragi Sangati", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.8, "price": 320, "place": "Rayalaseema", "description": "Country chicken curry with fiery local spices.", "isAvailable": true, "pairingIds": ["AP4"] },
+  { "id": "AP3", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Natu Kodi Kura/ Chicken", "image": "images/AP/natukodi_kura.jpg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Ragi Sangati", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.8, "price": 320, "place": "Rayalaseema", "description": "Country chicken curry with fiery local spices.", "isAvailable": true, "pairingIds": ["AP4"] },
 
   { "id": "AP4", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Ragi Sangati", "image": "images/AP/ragi_sangati.jpg", "category": "Main Course", "diet": "veg", "combosBestFor": "Natu Kodi Kura", "mealTime": ["Lunch"], "quantity": "400g", "rating": 4.6, "price": 100, "place": "Chittoor", "description": "Healthy finger millet balls, a Rayalaseema staple.", "isAvailable": true, "pairingIds": ["AP3"] },
 
@@ -23,6 +23,8 @@
   { "id": "AP10", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Pootharekulu", "image": "images/AP/putharekulu.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "Tea", "mealTime": ["Snack"], "quantity": "2 pieces", "rating": 5.0, "price": 100, "place": "Atreyapuram", "description": "Paper-sweet wafers stuffed with jaggery and nuts.", "isAvailable": true, "pairingIds": [] },
 
   { "id": "AP11", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Bobbatlu", "image": "images/AP/bobbatlu.webp", "category": "Dessert", "diet": "veg", "combosBestFor": "Ghee", "mealTime": ["Snack", "Lunch"], "quantity": "2 pieces", "rating": 4.7, "price": 90, "place": "Anantapur", "description": "Sweet flatbread filled with lentil and jaggery.", "isAvailable": true, "pairingIds": [] },
+  
+  { "id": "AP2", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Gongura Mutton", "image": "images/AP/gongura_mutton.jpeg", "category": "Curry", "diet": "non-veg", "combosBestFor": "Steamed Rice", "mealTime": ["Lunch", "Dinner"], "quantity": "300g", "rating": 4.9, "price": 350, "place": "Guntur", "description": "Spicy mutton cooked with tangy sorrel leaves.", "isAvailable": true, "pairingIds": ["AP20"] },
 
   { "id": "AP12", "stateId": "AP", "state": "Andhra Pradesh", "dishName": "Mirchi Bajji", "image": "images/AP/bajji.jpg", "category": "Snack", "diet": "veg", "combosBestFor": "Onions", "mealTime": ["Snack"], "quantity": "3 pieces", "rating": 4.6, "price": 60, "place": "Kurnool", "description": "Deep-fried stuffed green chilli fritters.", "isAvailable": true, "pairingIds": [] },
 
