@@ -3,7 +3,7 @@ import { DishContext } from "../context/DishContext";
 
 
 const DishCard = ({ dish }) => {
-    const { dishes, setVisibleCount } = useContext(DishContext)
+    const { dishes, setVisibleCount,handleClearAll } = useContext(DishContext)
 
     const [showmore, setShowMore] = useState(false);
 
@@ -29,6 +29,9 @@ const DishCard = ({ dish }) => {
             element.classList.add('flash-highlight');
             setTimeout(() => element.classList.remove('flash-highlight'), 2000)
         } else {
+
+            handleClearAll()// here it is used when user uses many filters like telangana,evening,curries=> then this show that respective
+            //dishes only  in that when we click on combo link it will not work so by using " handleClearAll()" function we are reseting all filters so all dishes will show in that the combo we will find out
             const targetIndex = dishes.findIndex((d) => d.id === targetId)
 
             if (targetIndex !== -1) {

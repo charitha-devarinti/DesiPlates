@@ -19,6 +19,16 @@ export function DishProvider({children}){
      setVisibleCount(prevConut=> prevConut+12)
    }
 
+
+  const handleClearAll=()=>{
+       setUserInput('')
+        setVegBtn(false)
+        setNonVegBtn(false);
+        setCurriesBtn(false);
+        setDessertBtn(false);
+        setStateSelector('');
+        setMealSelector('');
+  }
    
 
   useEffect(()=>{
@@ -44,7 +54,7 @@ export function DishProvider({children}){
   },[])
       
      return(
-        <DishContext.Provider value={{dishes,loading,error,visibleCount,showMore,setVisibleCount,userInput,setUserInput,vegBtn,setVegBtn,nonVegBtn,setNonVegBtn,curriesBtn,setCurriesBtn,dessertBtn,setDessertBtn,stateSelector,setStateSelector,mealSelector,setMealSelector}}>
+        <DishContext.Provider value={{dishes,loading,error,visibleCount,showMore,setVisibleCount,userInput,setUserInput,vegBtn,setVegBtn,nonVegBtn,setNonVegBtn,curriesBtn,setCurriesBtn,dessertBtn,setDessertBtn,stateSelector,setStateSelector,mealSelector,setMealSelector,handleClearAll}}>
             {children}
         </DishContext.Provider>
      )

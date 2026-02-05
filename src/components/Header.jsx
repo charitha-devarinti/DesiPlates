@@ -3,7 +3,7 @@ import { useState,useContext} from 'react';
 import { DishContext } from '../context/DishContext';
 
 const Header = () => {
-    const {setUserInput,setStateSelector,setMealSelector,setVisibleCount,setCurriesBtn,setDessertBtn,setVegBtn,setNonVegBtn}=useContext(DishContext);
+    const {setUserInput,setStateSelector,setMealSelector,setVisibleCount,handleClearAll}=useContext(DishContext);
     const [inputValue,setInputValue]=useState('');
     const [stateMeal,setStateMeal]=useState('');
     const [mealTime,setMealTime]=useState('')
@@ -36,19 +36,13 @@ const Header = () => {
     //console.log('from header',stateMeal)
 
     const handleResetAll=()=>{
-        setUserInput('')
-        setVegBtn(false)
-        setNonVegBtn(false);
-        setCurriesBtn(false);
-        setDessertBtn(false);
-        setStateSelector('');
-        setMealSelector('');
+        handleClearAll();
         setVisibleCount(12);
 
         // reseting the actual text in boxes
         setInputValue('');
         setStateMeal('')
-
+        setMealTime('')
     }
    
     return ( 
