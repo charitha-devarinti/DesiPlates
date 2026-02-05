@@ -5,18 +5,20 @@ import '../small_header.css'
 
 
 const SmallHeader = () => {
-    const  {setVegBtn,vegBtn,nonVegBtn,setNonVegBtn,setCurriesBtn,curriesBtn,dessertBtn,setDessertBtn}=useContext(DishContext)
+    const  {setVegBtn,vegBtn,nonVegBtn,setNonVegBtn,setCurriesBtn,curriesBtn,dessertBtn,setDessertBtn,setVisibleCount}=useContext(DishContext)
     const handleVeg=()=>{
          setVegBtn(prev=>!prev)
          setNonVegBtn(false)
          setCurriesBtn(false)
          setDessertBtn(false)
+         setVisibleCount(12)
     }
     const handleNonVeg=()=>{
         setNonVegBtn(prev => !prev)
         setVegBtn(false)
         setCurriesBtn(false)
         setDessertBtn(false)
+        setVisibleCount(12)
     }
 
     const handleCurries = ()=>{
@@ -24,6 +26,7 @@ const SmallHeader = () => {
           setNonVegBtn(false)
           setVegBtn(false)
           setDessertBtn(false)
+          setVisibleCount(12)
     }
    
     const handleDesserts = ()=>{
@@ -31,14 +34,15 @@ const SmallHeader = () => {
         setCurriesBtn(false);
         setNonVegBtn(false);
         setVegBtn(false)
+        setVisibleCount(12);
     }
 
     return ( 
         <div className="small-header">
-            <button onClick={handleVeg}>{vegBtn ?'Show all dishes':'Veg'}</button>
-            <button onClick={handleNonVeg}>{nonVegBtn ?'Show all dishes':'Non-Veg'}</button>
-            <button onClick={handleCurries}>{curriesBtn ? 'Show all dishes':'Curries'}</button>
-            <button onClick={handleDesserts}>{dessertBtn ? 'Show all dishes': 'Desserts'}</button>
+            <button className={vegBtn ? "filter-btn active" : "filter-btn inactive"} onClick={handleVeg}>Veg</button>
+            <button className={nonVegBtn ? "filter-btn active" : "filter-btn inactive"} onClick={handleNonVeg}>Non-Veg</button>
+            <button className={curriesBtn ? "filter-btn active" : "filter-btn inactive"} onClick={handleCurries}>Curries</button>
+            <button className={dessertBtn ? "filter-btn active" : "filter-btn inactive"} onClick={handleDesserts}>Desserts</button>
         </div>
      );
 }

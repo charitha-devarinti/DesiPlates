@@ -7,11 +7,13 @@ export function DishProvider({children}){
   const [dishes,setDishes]=useState([]);
   const [loading,setLoading]=useState(true);
   const [error,setError]=useState(null);
-  const  [userInput, setUserInput]=useState('');
+  const [userInput, setUserInput]=useState('');
   const [vegBtn,setVegBtn]=useState(false);
   const [nonVegBtn,setNonVegBtn]=useState(false);
   const [curriesBtn,setCurriesBtn]=useState(false);
   const [dessertBtn,setDessertBtn]=useState(false);
+  const [stateSelector,setStateSelector]=useState('');
+  const [mealSelector,setMealSelector]=useState('')
 
    const showMore=()=>{
      setVisibleCount(prevConut=> prevConut+12)
@@ -42,7 +44,7 @@ export function DishProvider({children}){
   },[])
       
      return(
-        <DishContext.Provider value={{dishes,loading,error,visibleCount,showMore,setVisibleCount,userInput,setUserInput,vegBtn,setVegBtn,nonVegBtn,setNonVegBtn,curriesBtn,setCurriesBtn,dessertBtn,setDessertBtn}}>
+        <DishContext.Provider value={{dishes,loading,error,visibleCount,showMore,setVisibleCount,userInput,setUserInput,vegBtn,setVegBtn,nonVegBtn,setNonVegBtn,curriesBtn,setCurriesBtn,dessertBtn,setDessertBtn,stateSelector,setStateSelector,mealSelector,setMealSelector}}>
             {children}
         </DishContext.Provider>
      )

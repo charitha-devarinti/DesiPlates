@@ -8,17 +8,29 @@
       column-gap: 50px;
 }
 
-button{
-    background-color: red;
-    border:none;
+.filter-btn{
     padding:8px 20px;
-    font-size: 16px;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.1s ease;
+    transition: all 0.3s ease;
+    border:2px solid #ff0000;
+    font-size:14px;
+    outline: none;
+    margin:5px;
+}
+
+.filter-btn.active{
+    background-color: #ff0000;
+    color:#ffffff;
 
 }
 
-button:hover{
-    background-color: rgb(214, 3, 3);
+.filter-btn.inactive{
+    background-color: #ffffff;
+    color:#ff0000
+}
+
+.filter-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
