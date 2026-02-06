@@ -5,7 +5,7 @@ import { DishContext } from '../context/DishContext';
 const DishList = () => {
    const {dishes,loading,error,visibleCount,showMore,userInput,vegBtn,nonVegBtn,curriesBtn,dessertBtn,stateSelector,mealSelector}=useContext(DishContext)
    const inputTrimed=userInput.trim()
-    
+
    const  filteredDishes=dishes.filter((dish)=>{
         // search match
         const matchesSearch= dish.dishName.toLowerCase().includes(inputTrimed);
@@ -13,7 +13,7 @@ const DishList = () => {
         let matchesDiet=true;
         if(vegBtn){
              matchesDiet=dish.diet.toLowerCase() === 'veg';
-        }   
+        }
         if(nonVegBtn) {
           matchesDiet= dish.diet.toLowerCase() === 'non-veg';
         }
@@ -39,44 +39,32 @@ const DishList = () => {
    const finalArray= filteredDishes.slice(0,visibleCount);
    // logic for load more button for to show / hide
    const hasMore = filteredDishes.length > visibleCount
-    return ( 
+    return (
         <div>
-          {loading && <p>Loading...</p>}
-          {error && <div>{error}</div>}
-            
-          {
+          {loading && <p className="loading-state">Loading...</p>}
+          {error && <div className="error-state">{error}</div>}
+
           <div className="hero-section">
-               {  finalArray.length > 0 ?(
-                    finalArray.map((dish)=>{
-                 return(
-                    <DishCard key={dish.dishId} dish={dish} />
-                 )       
-              })
-               ):(
-               <>
-                 <p style={{fontSize:'20px',fontWeight:'bold',textAlign:'center',display:'block'}}>No dishes Found...</p>
-                
-               </>
-               )
-              
-             
-          }
-
+               {finalArray.length > 0 ? (
+                    finalArray.map((dish) => (
+                        <DishCard key={dish.dishId} dish={dish} />
+                    ))
+               ) : (
+                    !loading && (
+                        <div className="empty-state">
+                            <p>No dishes found...</p>
+                        </div>
+                    )
+               )}
           </div>
-}
 
-           {
-             !loading  && hasMore &&(
-               <div style={{textAlign:'center',width:'100%'}}>
-                  <button className="show-more-btn"onClick={showMore}> Load More ...</button>
-               </div>
-               
-            )
-          }
-
-         
+          {!loading && hasMore && (
+              <div style={{textAlign:'center'}}>
+                  <button className="show-more-btn" onClick={showMore}>Load More ...</button>
+              </div>
+          )}
         </div>
      );
 }
- 
+
 export default DishList;

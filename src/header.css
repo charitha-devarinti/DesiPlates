@@ -1,153 +1,179 @@
-.header{
-    display: flex; 
-    align-items: center;
-    justify-content: space-around;
-    height:70px;
-    padding:5px;
-    padding-top: 10px;
-    background-color: rgb(220, 219, 219);
-    position: fixed;
-    left:0;
-    right:0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    z-index:20;
-
+/* ===== Header ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: var(--space-sm) var(--space-lg);
+  background-color: var(--color-bg-header);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: var(--shadow-header);
+  z-index: 20;
 }
 
-
-.logo{
-  width:60px;
-  border-radius: 50%;
+/* ===== Logo ===== */
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
   cursor: pointer;
-  
+  object-fit: cover;
 }
 
-.input-search{
-    width:350px;
-    height:45px;
-    font-size:14px;
-    outline: none;
-    border:none;
-    padding-left:20px;
+/* ===== Search Area ===== */
+.search-area {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  padding-right: var(--space-xs);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-
-
-.search-area{
-    display: flex;
-    align-items: center;
-    background: white;
-    border:1px solid #ccc;
-    border-radius: 30px;
-    overflow: hidden;
-    padding-right: 5px;
-    
+.search-area:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
 }
 
-
-
-
-.search-btn{
-    margin-left:10px;
-    cursor: pointer;
-    height:35px;
-   border:none;
-    background-color: #CB202D;
-    padding-right:10px;
-    padding-left:10px;
-    font-size: 14px;
-    font-weight:bold;
-    border-radius: 25px;
-    transition: background-color 0.1s;
-    margin-left:0
-    
+.input-search {
+  width: 300px;
+  height: 40px;
+  font-size: var(--font-base);
+  outline: none;
+  border: none;
+  padding-left: var(--space-md);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: transparent;
 }
 
-.search-btn:hover{
-     background-color: #af1320;
-     box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+.input-search::placeholder {
+  color: var(--color-text-muted);
 }
 
-.clear-search{   
-    background-color: white;
-    padding:5px 10px;
-    border:1px solid rgb(42, 42, 42);
-    margin-right:8px;
-    border-radius:50%;
-    color:grey;
-    cursor:pointer;
-   
+.clear-search {
+  background-color: transparent;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  margin-right: var(--space-sm);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: var(--font-xs);
+  transition: all var(--transition-fast);
+  line-height: 1;
 }
 
-.clear-search:hover{
-    background-color: rgb(185, 184, 184);
-    color:black;
+.clear-search:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border-color: var(--color-text-muted);
 }
 
-.reset-btn{
-    background:none;
-    border: 1px solid #ff0000;
-    color:#ff0000;
-    font-size:1.3rem;
-    padding:4px 8px;
-    border-radius: 50%;
-    margin-left:8px;
-    cursor:pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ===== Search Button ===== */
+.search-btn {
+  cursor: pointer;
+  height: 34px;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 0 var(--space-md);
+  font-size: var(--font-base);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-family: var(--font-family);
 }
 
-.reset-btn:hover{
-    background-color: #ff0000;
-    color:white;
-    transform: rotate(-180deg);
+.search-btn:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-sm);
 }
 
-.place-label,.meal-label{
-    font-size:14px;
-    color:#555;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: bold;
+/* ===== Reset Button ===== */
+.reset-btn {
+  background: none;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  margin-left: var(--space-sm);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-#place,#meal{
-    background:white;
-    border:none;
-    padding:8px 12px;
-    font-size:16px;
-    margin-left:10px;
-    cursor: pointer;
-    border:1px solid #ddd;
-    border-radius: 20px;
+.reset-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  transform: rotate(-180deg);
 }
 
-.cart-logo{
-    width:80px;
-    border-radius: 50%;
-    cursor: pointer;
-   
-}
-.cart-container{
-    position:relative;
-}
-
-.cart-count{
-    background-color: #CB202D;
-    color:white;
-    min-width:20px;
-    height: 20px;
-    line-height:20px;
-    border-radius: 50%;
-    width:15px;  
-    position: absolute; 
-    top:5px;
-    right:14px;
-    font-size:16px;
-    font-weight: bold;
-    text-align: center;
-    border-radius:10px;
+/* ===== Dropdown Filters ===== */
+.place-label,
+.meal-label {
+  font-size: var(--font-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
+#place,
+#meal {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-base);
+  margin-left: var(--space-sm);
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast);
+}
+
+#place:focus,
+#meal:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* ===== Cart ===== */
+.cart-container {
+  position: relative;
+}
+
+.cart-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.cart-count {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: var(--radius-full);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: var(--font-xs);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}

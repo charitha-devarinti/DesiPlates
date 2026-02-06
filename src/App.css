@@ -1,191 +1,284 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-
-body{
-  background-color: rgb(248, 246, 246);
-  margin:0;
-  font-family: 'Poppins', sans-serif;
-  position:relative;
-
+body {
+  background-color: var(--color-bg);
+  margin: 0;
+  font-family: var(--font-family);
+  position: relative;
+  color: var(--color-text);
 }
 
-.hero-section{
-  padding-top:10px;
+/* ===== Dish Grid ===== */
+.hero-section {
+  padding-top: var(--space-md);
   display: grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: start;
-  margin-right:30px;
-  margin-left: 30px;
+  margin: 0 var(--space-xl);
   overflow: hidden;
-  gap:20px;
- 
+  gap: var(--space-lg);
 }
 
-.dish-image{
-  width:100%;
+@media (max-width: 1200px) {
+  .hero-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 var(--space-md);
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    margin: 0 var(--space-md);
+  }
+}
+
+/* ===== Dish Card ===== */
+.dishCard {
+  padding: var(--space-md);
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 280px;
+  min-height: 420px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dishCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ===== Image Container ===== */
+.image-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.dish-image {
+  width: 100%;
   object-fit: cover;
-  height:180px;
-  border-radius: 12px;
+  height: 180px;
+  border-radius: var(--radius-md);
   display: block;
-  background-color: aliceblue;
-  margin-bottom:15px;
+  background-color: var(--color-bg-secondary);
 }
 
-.image-container{
-    width:100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.dishCard{
-    padding:15px;
-    cursor: pointer;
-    transition: transform  0.2s ease;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    align-items:flex-start;
-    text-align:left;
-    max-width:280px;
-    min-height:420px;
-    margin:0 auto;
-    position:relative;
-}
-
-.dishCard:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  
-}
-
-.combo-box{
-  background: '#f9f9f9';
-  padding: '5px';
-  border-radius: '5px';
-  font-size: '11px'
-}
-
-.rating-badge{
-   background-color: rgba(0, 47, 0,0.9);
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap:8px;
-   position: absolute;
-   top:5px;
-   right:-15px;
-   width:50px;
-   padding-right: 5px;
-}
-
-.star-icon{
-   color:#FFD700;
-   font-size:18px;
-   font-weight:bold;
-}
-
-.dish-rating{
-  color:white;
-  font-weight:bold;
-}
-
-.state-badge{
+/* ===== Rating Badge ===== */
+.rating-badge {
+  background-color: var(--color-rating);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
   position: absolute;
-  right:-14px;
-  top:200px;
-  font-size:8px;
-  padding-right:5px;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-sm);
 }
 
-.dish-info{
-  font-size: 0.85rem; 
+.star-icon {
+  color: var(--color-star);
+  font-size: var(--font-lg);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.dish-rating {
+  color: var(--color-text-inverse);
+  font-weight: bold;
+  font-size: var(--font-base);
+}
+
+/* ===== State Badge ===== */
+.state-badge {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: var(--space-sm);
+  font-size: var(--font-xs);
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-inverse);
+}
+
+/* ===== Dish Info ===== */
+.dish-info {
+  font-size: var(--font-sm);
   line-height: 1.4;
-  color: #555;
-  display:flex;
+  color: var(--color-text-secondary);
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 5px;
-  text-align:left;
-
+  margin-bottom: var(--space-sm);
+  text-align: left;
+  width: 100%;
 }
 
-.dish-info p:nth-child(4){
-   color:#888;
-   font-size: 12px;
-   cursor: pointer;
-   text-decoration: underline;
-   margin:10px 0;
-}
-.price-text{
-    font-size: 16px;
-}
-.add-cart-btn{
-  width:100%;
-  background-color:  red;
-  font-size:14px;
-  font-weight:bold;
-  border: none;
-  padding:5px;
-  border-radius: 10px;
-  
- 
-  cursor: pointer;
-  transition: all 0.1s;
-  margin-top:auto;
+.dish-name {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: var(--space-sm) 0 var(--space-xs);
 }
 
-.add-cart-btn:hover{
-  background-color: rgb(205, 2, 2);
+.dish-price {
+  font-size: var(--font-xl);
+  font-weight: bold;
+  margin: var(--space-sm) 0;
 }
 
-.extra-info{
-  width:100%;
-  background-color: #f9f9f9;
-  padding:10px;
-  border-radius: 8px;
-  
+.dish-place {
+  color: var(--color-text-muted);
+  font-size: var(--font-xs);
+  margin: var(--space-xs) 0;
 }
 
-.show-more-btn{
-   display: block;
-   margin:50px auto;
-   position: relative;
-   z-index: 10;
-   padding:15px 40px;
-   background-color: #CB202D;
-   color:white;
-   cursor: pointer;
-   border-radius: 5px;
-   border:none;
-   font-size:16px;
-   font-weight:bold;
-   transition: all 0.1s ease;
+.price-text {
+  font-size: var(--font-md);
 }
 
-.show-more-btn:hover{
-  box-shadow: 2px 5px 5px rgba(0,0,0,0.1);
-  padding:20px 45px;
-
+/* ===== Combo Box ===== */
+.combo-box {
+  background: var(--color-bg-secondary);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-xs);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.flash-highlight{
-  border:2px solid #CB202D;
-  box-shadow: 0 0 15px rgba(203,32,45,0.5);
-  transform: scale(1.02);
-  transition: all 0.3 ease;
-}
-
-
-
-.combo-link{
-  color:#CB202D;
+.combo-link {
+  color: var(--color-primary);
   cursor: pointer;
   font-weight: 600;
   text-decoration: underline;
-  margin-left: 5px;
+  margin-left: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+.combo-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ===== View Details Toggle ===== */
+.view-details-toggle {
+  color: var(--color-text-muted);
+  font-size: var(--font-xs);
+  cursor: pointer;
+  text-decoration: underline;
+  margin: var(--space-sm) 0;
+  transition: color var(--transition-fast);
+}
+
+.view-details-toggle:hover {
+  color: var(--color-text);
+}
+
+/* ===== Extra Info (Expandable) ===== */
+.extra-info {
+  width: 100%;
+  background-color: var(--color-bg-secondary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  box-sizing: border-box;
+}
+
+.extra-info p {
+  font-size: var(--font-sm);
+  color: var(--color-text-secondary);
+  margin: var(--space-xs) 0;
+}
+
+/* ===== Add to Cart Button ===== */
+.add-cart-btn {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-base);
+  font-weight: 600;
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  margin-top: auto;
+}
+
+.add-cart-btn:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Show More Button ===== */
+.show-more-btn {
+  display: block;
+  margin: var(--space-2xl) auto;
+  padding: var(--space-md) var(--space-xl);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: var(--font-md);
+  font-weight: 600;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.show-more-btn:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ===== Flash Highlight (Combo scroll) ===== */
+.flash-highlight {
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 15px rgba(203, 32, 45, 0.4);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* ===== Empty / Loading / Error States ===== */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  color: var(--color-text-muted);
+}
+
+.empty-state p {
+  font-size: var(--font-lg);
+  font-weight: 600;
+}
+
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  font-size: var(--font-md);
+}
+
+.error-state {
+  color: var(--color-error);
 }
