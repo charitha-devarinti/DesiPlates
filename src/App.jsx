@@ -1,8 +1,8 @@
+import { Routes,Route } from 'react-router';
+import Home from './pages/home';
+import CartPage from './pages/cartPage';
 
 
-import Header from './components/Header';
-import DishList from './components/DishList';
-import SmallHeader from './components/SmallHeader';
 
 import './App.css'
 
@@ -11,12 +11,13 @@ const App = () => {
 
   
   return ( 
-        <div>
-          <Header/>  
-          <SmallHeader/>
-         <DishList/>
+        <>
+         <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/cart' element={<CartPage/>} />
+         </Routes>
 
-        </div>
+        </>
    );
 }
  

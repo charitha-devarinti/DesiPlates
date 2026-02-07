@@ -1,9 +1,13 @@
 import '../header.css'
 import { useState,useContext} from 'react';
 import { DishContext } from '../context/DishContext';
+import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router';
 
 const Header = () => {
     const {setUserInput,setStateSelector,setMealSelector,setVisibleCount,handleClearAll}=useContext(DishContext);
+    const {itemCount}=useContext(CartContext)
+    
     const [inputValue,setInputValue]=useState('');
     const [stateMeal,setStateMeal]=useState('');
     const [mealTime,setMealTime]=useState('')
@@ -86,10 +90,13 @@ const Header = () => {
 
                 <div className='cart-container'>
                   <div >
-                     <img className='cart-logo' src='./images/cart-logo.jpg'/>
+                    <Link to='/cart'>
+                       <img className='cart-logo' src='./images/cart-logo.jpg'/>
+                    </Link>
+                     
                   </div>
                   
-                  <p className='cart-count'>3</p>
+                  <p className='cart-count'>{itemCount}</p>
                 </div>
                 
                 

@@ -1,0 +1,164 @@
+.empty-cart{
+    text-align: center;
+    padding: 50px;
+}
+
+.checkoutBtn{
+    padding:15px;
+    background-color: #2563eb;
+    color:white;
+    border-radius: 8px;
+    border:none;
+    font-size: 1rem;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.checkoutBtn:hover{
+    background-color: #0c47c8;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.logo-in-cart{
+    width:80px;
+    border-radius:50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+
+
+}
+
+.logo-in-cart:hover{
+    transform: scale(1.05);
+}
+
+
+.cart-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    
+}
+
+.container{
+    margin:0 auto;
+    padding:20px;
+}
+
+.title{
+    font-size: '2rem';
+    margin-bottom: 30px;
+    color:#1a1a1a;
+}
+
+.cartWrapper{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    column-gap: 30px;
+    row-gap: 15px;
+   
+
+}
+
+.itemList{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    padding:15px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.image{
+    width:200px;
+    height:200px;
+    border-radius:8px;
+    object-fit: cover;
+    margin-right:20px;
+
+}
+
+.details{
+    flex: 1;
+}
+
+.itemsName{
+    margin:0 0 5px 0 ;
+    font-size: 1.2rem;
+}
+
+.itemPrice{
+    color:#666;
+    font-weight: bold;
+}
+
+.removeBtn{
+    background: none;
+    border:none;
+    color:#ef4444;
+    cursor:pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-top:10px;
+}
+
+.summaryCard{
+    background-color: #f9fafb;
+    padding:25px;
+    border-radius: 12px;
+    height:fit-content;
+    border:1px solid #eee;
+}
+
+.summaryTitle{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.summaryRow{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color:#4b5563;
+}
+
+.totalRow{
+    display: flex;
+    justify-content: space-between;
+    font-size:1.3rem;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.divider{
+    border:0;
+    border-top:1px solid #e5e7eb;
+    margin:20px 0;
+}
+
+.cart-buttons{
+    display: flex;
+    align-items: start;
+    gap:20px;
+}
+
+.plus_minus{
+    margin-right:5px;
+    margin-left:5px;
+    border: none;
+    background-color: rgb(185, 184, 184);
+    font-size:16px;
+    border-radius: 3px;
+    cursor: pointer;
+}

@@ -1,9 +1,11 @@
 import { useState, useContext } from "react";
 import { DishContext } from "../context/DishContext";
+import { CartContext} from "../context/CartContext";
 
 
 const DishCard = ({ dish }) => {
     const { dishes, setVisibleCount,handleClearAll } = useContext(DishContext)
+    const {addToCart}=useContext(CartContext);
 
     const [showmore, setShowMore] = useState(false);
 
@@ -105,7 +107,7 @@ const DishCard = ({ dish }) => {
 
                 </div>
 
-                <button className='add-cart-btn'>Add to Cart</button>
+                <button className='add-cart-btn'onClick={()=>addToCart(dish)}>Add to Cart</button>
 
             </div>
 

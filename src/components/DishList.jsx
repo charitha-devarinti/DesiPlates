@@ -46,6 +46,7 @@ const DishList = () => {
             
           {
           <div className="hero-section">
+            
                {  finalArray.length > 0 ?(
                     finalArray.map((dish)=>{
                  return(
