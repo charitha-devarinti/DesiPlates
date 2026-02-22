@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from routes.food_route import food_api_router
 from routes.cart_route import cart_router
 from fastapi.middleware.cors import CORSMiddleware 
+from routes.auth_route import auth_router
 
 
 app=FastAPI()
@@ -27,3 +28,4 @@ app.add_middleware(
 
 app.include_router(food_api_router,prefix="/api")
 app.include_router(cart_router,prefix="/api/cart",tags=["Cart"])
+app.include_router(auth_router,prefix="/api/auth",tags=["Authentication"])

@@ -13,4 +13,5 @@ client=AsyncIOMotorClient(
 db=client.IndianFoodDB
 collection_name=db["dishes"]
 cart_collection=db["cart"]
+users_collection=db["users"]
                                                                                                
