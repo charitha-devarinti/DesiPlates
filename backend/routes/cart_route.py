@@ -1,16 +1,15 @@
-from fastapi import APIRouter
+from fastapi import APIRouter,Depends,HTTPException,status
 from models.cart_model import CartItem
-from config.database import cart_collection
-from config.database import collection_name
-from schemas.cart_schema import cart_item_serializer
+from config.database import cart_collection,collection_name
+from auth.auth_handler import get_current_user
 from bson import ObjectId
 
 cart_router=APIRouter()
 
 @cart_router.post("/add")
-async def add_to_cart(item:CartItem):
+async def add_to_cart(item:CartItem,current_user:str=Depends(get_current_user)):
     existing_item=await cart_collection.find_one({
-        "user_email":item.user_email,
+        "user_email":current_user,
         "dish_id":item.dish_id
     })
     
@@ -20,18 +19,20 @@ async def add_to_cart(item:CartItem):
             {"$inc":{"quantity":item.quantity}}
         )
         return {"status":"ok","message":"quantity updated"}
-    
-    await cart_collection.insert_one(item.dict())
+    cart_data=item.dict()
+    cart_data["user_email"]=current_user
+    await cart_collection.insert_one(cart_data)
+
     return {"status":"ok","message":"Added to cart"}
  
     
-@cart_router.get("/{user_email}")
-async def get_cart(user_email:str):
-    cursor=cart_collection.find({"user_email":user_email})
+@cart_router.get("/my-cart")
+async def get_cart(current_user:str=Depends(get_current_user)):
+    cursor=cart_collection.find({"user_email":current_user})
     cart_items=await cursor.to_list(length=100)
     full_details=[]
     for item in cart_items:
-        dish= await collection_name.find_one({"_id":item["dish_id"]})
+        dish= await collection_name.find_one({"_id":ObjectId(item["dish_id"])})
         if(dish):
             full_details.append({
                 "cart_item_id":str(item["_id"]),
@@ -44,7 +45,10 @@ async def get_cart(user_email:str):
     return {"status":"ok","data":full_details}
 
 @cart_router.put("/update_quantity/{cart_item_id}")
-async def update_quantity(cart_item_id:str,type:str):
+async def update_quantity(cart_item_id:str,
+                          type:str,
+                          current_user:str=Depends(get_current_user)  
+                          ):
     obj_id=ObjectId(cart_item_id)
     
     if(type=='plus'):
@@ -52,7 +56,13 @@ async def update_quantity(cart_item_id:str,type:str):
     else:
         change_value=-1
         
-    current_item=await cart_collection.find_one({"_id":obj_id})
+    current_item=await cart_collection.find_one({
+        "_id":obj_id,
+        "user_email":current_user        
+        })
+    
+    if not current_item:
+        return {"status":"error","message":"Item not found or unauthorized"}
     
     if(current_item):
         new_quantity=current_item["quantity"]+change_value
@@ -67,9 +77,12 @@ async def update_quantity(cart_item_id:str,type:str):
     return {"status":"error","message":"Item not found"}
 
 @cart_router.delete("/delete/{cart_item_id}")
-async def delete_item(cart_item_id:str):
+async def delete_item(cart_item_id:str,current_user:str=Depends(get_current_user)  ):
     obj_id=ObjectId(cart_item_id)
-    result=await cart_collection.delete_one({"_id":obj_id})
+    result=await cart_collection.delete_one({
+        "_id":obj_id,
+        "user_email":current_user        
+        })
     
     if result.deleted_count == 1:
         return {"status":"ok","message":"item removed from cart"}
