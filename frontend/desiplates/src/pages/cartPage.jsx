@@ -14,10 +14,7 @@ const CartPage = () => {
    // if cart is empty
    if(cart.length===0){
     return(
-        <div className="min-h-screen bg-[#f9f5f0]">
-            <Link to='/'>
-             <Navigation/>
-            </Link>
+        <div className="min-h-screen bg-[#f9f5f0]">       
             
             <div className="flex flex-col items-center justify-center pt-20 px-4">
                 <div className="bg-white p-10 rounded-[50px] shadow-sm flex flex-col items-center">

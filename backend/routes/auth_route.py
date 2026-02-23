@@ -1,4 +1,5 @@
-from fastapi import APIRouter,HTTPException,status
+from fastapi import APIRouter,HTTPException,status,Depends
+from fastapi.security import OAuth2PasswordRequestForm
 from models.user_model import User,UserLogin
 from config.database import users_collection
 from auth.auth_handler import get_password_hash,verify_password,create_access_token
@@ -24,11 +25,11 @@ async def signup(user:User):
     return {"status":"ok","message":"User created successfully"}
 
 @auth_router.post("/login")
-async def login(user_data:UserLogin):
-    user=await users_collection.find_one({"email":user_data.email})
+async def login(form_data:OAuth2PasswordRequestForm=Depends()):
+    user=await users_collection.find_one({"email":form_data.username})
     
-    if not user or not verify_password(user_data.password,user["password"]):
+    if not user or not verify_password(form_data.password,user["password"]):
         raise HTTPException(status_code=401,detail="Invalid email or password")
     
     token=create_access_token(data={"sub":user["email"]})
-    return {"access_token":token,"token_type":"bearer","user":user_serializer(user)}
+    return {"access_token":token,"token_type":"bearer"}

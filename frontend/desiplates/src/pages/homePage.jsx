@@ -6,9 +6,7 @@ import ComboModel from "../components/ComboModal";
 const HomePage = () => {
     return ( 
          <div className="min-h-screen bg-[#f9f5f0]">
-   
-      <Navigation/>
-     
+ 
      <main className="relative">
         <HeroFilter/>
         <Foodgrid/>

@@ -1,5 +1,5 @@
 from fastapi import Depends,HTTPException,status
-from fastapi.security import OAUTH2PasswordBearer
+from fastapi.security import OAuth2PasswordBearer
 
 from passlib.context import CryptContext
 import os
@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-oauth2_scheme=OAUTH2PasswordBearer(tokenUrl="api/auth/login")
+oauth2_scheme=OAuth2PasswordBearer(tokenUrl="api/auth/login")
 
 pwd_context=CryptContext(schemes=["bcrypt"],deprecated="auto")
 
