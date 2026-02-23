@@ -1,10 +1,12 @@
 import {ShoppingCart,MapPin,Star} from "lucide-react"
-
+import { useNavigate } from "react-router-dom";
 import { DishContext } from "../context/DishContext";
 import { CartContext } from "../context/CartContext";
-import { useContext} from "react";
+import { useContext, useState} from "react";
 
 const FoodCard = ({dish}) => {
+   const [isAdding,setIsAdding]=useState(false)
+   const naviagte=useNavigate()
    const {masterDishList,getDishById}=useContext(DishContext)
    const {addToCart}=useContext(CartContext)
 
@@ -24,6 +26,25 @@ const FoodCard = ({dish}) => {
       }
 
     }
+   }
+
+   const handleAddToCart= async()=>{
+    const token=localStorage.getItem("token");
+    if(!token){
+        
+        naviagte("/login")
+        return
+    }
+    setIsAdding(true)
+    try{
+        await addToCart(dish._id||dish.id)
+        setTimeout(()=>setIsAdding(false),1000)
+    }catch(err){
+        setIsAdding(false)
+        console.log("Failed to add:",err)
+    }
+
+     
    }
     
     return ( 
@@ -105,12 +126,30 @@ const FoodCard = ({dish}) => {
                 </div>
             </div>
             <button
-              disabled={!dish.isAvailable}
-              onClick={()=>addToCart(dish._id || dish.id)}
-              className={`w-full font-bold py-2.5 rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95 ${dish.isAvailable ? 'bg-orange-600 hover:bg-orange-700 text-white shadow-md shadow-orange-100 cursor-pointer':'bg-slate-200 text-slate-500 cursor-not-allowed'}`}
-            >
-                <ShoppingCart size={16}/>
+              disabled={!dish.isAvailable || isAdding}
+              onClick={handleAddToCart}
+              className={`w-full font-bold py-2.5 rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95 ${!dish.isAvailable 
+                ? 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
+                :isAdding
+                  ?'bg-green-500 text-white cursor-wait'
+                  :'bg-orange-600 hover:bg-orange-700 text-white shadow-lg shadow-orange-100 hover:shadow-orange-200'
+            }`}
+            > 
+            {isAdding?(
+                <>
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"/>
+                 <span className="text-sm">Adding...</span>
+                
+                </>
+            ):(
+                <>
+                    <ShoppingCart size={16}/>
                 <span className="text-sm">{dish.isAvailable?'Add to Cart':'Sold Out'}</span>
+                </>
+            )
+            }
+
+                
             </button>
         </div>
 

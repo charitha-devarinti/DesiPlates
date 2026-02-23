@@ -32,7 +32,7 @@ async def get_cart(current_user:str=Depends(get_current_user)):
     cart_items=await cursor.to_list(length=100)
     full_details=[]
     for item in cart_items:
-        dish= await collection_name.find_one({"_id":ObjectId(item["dish_id"])})
+        dish= await collection_name.find_one({"_id":item["dish_id"]})
         if(dish):
             full_details.append({
                 "cart_item_id":str(item["_id"]),

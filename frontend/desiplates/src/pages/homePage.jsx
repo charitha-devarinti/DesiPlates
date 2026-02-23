@@ -5,13 +5,11 @@ import ComboModel from "../components/ComboModal";
 
 const HomePage = () => {
     return ( 
-         <div className="min-h-screen bg-[#f9f5f0]">
- 
-     <main className="relative">
-        <HeroFilter/>
-        <Foodgrid/>
-     </main>  
-    <ComboModel/>
+   <div className="relative">
+       <HeroFilter/>
+       <Foodgrid/>
+    
+       <ComboModel/>
     </div>
      );
 }

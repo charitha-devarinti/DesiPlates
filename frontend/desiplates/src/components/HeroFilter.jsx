@@ -122,7 +122,7 @@ const HeroFilter = () => {
                     
                    }}
                    >
-                    <RotateCw size={20} className={`text-slate-500 transition-transform duration-500 ${isRefreshing?'rotate-180':'group-hover:rotate-45'}`}/>
+                    <RotateCw size={20} className={`text-slate-500 transition-transform duration-500 ${isRefreshing?'rotate-180':''}`}/>
                    </button>
 
                 </div>
