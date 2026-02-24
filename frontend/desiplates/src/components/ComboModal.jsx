@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router";
 import { DishContext } from "../context/DishContext";
 import { CartContext } from "../context/CartContext";
 import { ShoppingCart,X,Star,MapPin, Loader2 } from "lucide-react";
@@ -8,11 +9,17 @@ const ComboModel = () => {
     const {focusedDish,setFocusedDish}=useContext(DishContext)
     const {addToCart}=useContext(CartContext)
     const [isAdding,setIsAdding]=useState(false)
+    const navigate=useNavigate()
 
 
     if(!focusedDish || Object.keys(focusedDish).length===0) return null;
 
    const handleAddClick=async ()=>{
+    const token=localStorage.getItem("token");
+    if(!token){
+        navigate("/login")
+        return
+    }
     setIsAdding(true)
     try{
         await addToCart(focusedDish._id || focusedDish.id)
@@ -23,7 +30,7 @@ const ComboModel = () => {
 
     }catch(err){
         setIsAdding(false)
-        console.lof(err)
+        console.log("Failed to add:",err)
     }
 
    }

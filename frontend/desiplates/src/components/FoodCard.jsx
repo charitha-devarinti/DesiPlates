@@ -6,7 +6,7 @@ import { useContext, useState} from "react";
 
 const FoodCard = ({dish}) => {
    const [isAdding,setIsAdding]=useState(false)
-   const naviagte=useNavigate()
+   const navigate=useNavigate()
    const {masterDishList,getDishById}=useContext(DishContext)
    const {addToCart}=useContext(CartContext)
 
@@ -32,7 +32,7 @@ const FoodCard = ({dish}) => {
     const token=localStorage.getItem("token");
     if(!token){
         
-        naviagte("/login")
+        navigate("/login")
         return
     }
     setIsAdding(true)
