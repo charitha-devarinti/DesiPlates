@@ -10,7 +10,8 @@ app=FastAPI()
 # defing who is allowed to talk to backend
 origins=[
     "http://localhost:3000",#standard react port
-    "http://localhost:5173" #standard vite port
+    "http://localhost:5173",#standard vite port
+    "https://desiplates.vercel.app"
 ]
 
 # applying the security 
