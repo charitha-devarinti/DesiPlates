@@ -2,6 +2,7 @@ import { createContext,useEffect,useState } from "react";
 
 export const CartContext=createContext()
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 export function CartProvider({children}){
     const [cart,setCart]=useState([])
     const [message,setMessage]=useState("")
@@ -16,7 +17,7 @@ export function CartProvider({children}){
         return;
     } 
     try{
-        const res=await fetch(`/api/cart/my-cart`,{
+        const res=await fetch(`${API_BASE_URL}/api/cart/my-cart`,{
             headers:{
                 'Authorization':`Bearer ${token}`,
                 'Content-Type':'application/json'
@@ -54,7 +55,7 @@ const addToCart= async (dishId)=>{
      
     const token=localStorage.getItem("token")
     try{
-        const response=await fetch('/api/cart/add',{
+        const response=await fetch(`${API_BASE_URL}/api/cart/add`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -84,7 +85,7 @@ const updateQuantity=async (cartItemId,type)=>{
     const token=localStorage.getItem("token")
 
     try{
-        const response=await fetch(`/api/cart/update_quantity/${cartItemId}?type=${type}`,{
+        const response=await fetch(`${API_BASE_URL}/api/cart/update_quantity/${cartItemId}?type=${type}`,{
             method:'PUT',
             headers:{
                 'Content-Type':'application/json',
@@ -107,7 +108,7 @@ const updateQuantity=async (cartItemId,type)=>{
 const removeFromCart= async (cartItemId)=>{
      const token=localStorage.getItem("token")
     try{
-        const response=await fetch(`/api/cart/delete/${cartItemId}`,{
+        const response=await fetch(`${API_BASE_URL}/api/cart/delete/${cartItemId}`,{
             method:'DELETE',
             headers:{            
                 'Authorization':`Bearer ${token}`

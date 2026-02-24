@@ -1,5 +1,7 @@
 import {createContext,useEffect,useState} from "react"
 
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 export const DishContext=createContext();
 
 export function DishProvider({children}){
@@ -38,7 +40,7 @@ export function DishProvider({children}){
   
     const getDishById=async (id)=>{
         try{
-            const res=await fetch(`/api/dishes/${id}`);
+            const res=await fetch(`${API_BASE_URL}/api/dishes/${id}`);
             if(!res.ok){
                 throw new Error('Dish hot found')
             }
@@ -54,7 +56,7 @@ export function DishProvider({children}){
     useEffect(()=>{
         const fetchMasterList=async () =>{
             try{
-                const res=await fetch(`/api/dishes?limit=1000`)
+                const res=await fetch(`${API_BASE_URL}/api/dishes?limit=1000`)
                 const result=await res.json();
                 if(result.status==='ok'){
                     setMasterDishList(result.data)
@@ -98,7 +100,7 @@ export function DishProvider({children}){
                 if(mealSelector){
                     params.append("mealTime",mealSelector)
                 }
-              const res=await fetch(`/api/dishes?${params.toString()}`);
+              const res=await fetch(`${API_BASE_URL}/api/dishes?${params.toString()}`);
               if(!res.ok){
                 throw new Error('Failed to fetch data')
               }
