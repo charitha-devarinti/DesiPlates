@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from 'react-router-dom'
 import { Eye, EyeOff,Mail,User,Lock } from 'lucide-react'
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 const SignUp = () => {
     const [formData, setFormData] = useState({
         full_name: "",
@@ -20,7 +21,7 @@ const SignUp = () => {
         setIsSubmitting(true)
         setError("")
         try {
-            const response = await fetch('/api/auth/signup', {
+            const response = await fetch(`${API_BASE_URL}/api/auth/signup`, {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)

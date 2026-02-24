@@ -3,7 +3,7 @@ import { useNavigate,Link } from "react-router-dom";
 import {Eye,EyeOff,LogIn,Mail} from 'lucide-react'
 import { CartContext } from "../context/CartContext";
 
-
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 const Login = () => {
     const {fetchCart}=useContext(CartContext)
     const [email,setEmail]=useState("");
@@ -21,7 +21,7 @@ const Login = () => {
        formData.append('password',password)
 
         try{
-            const response=await fetch("/api/auth/login",{
+            const response=await fetch(`${API_BASE_URL}/api/auth/login`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/x-www-form-urlencoded"
