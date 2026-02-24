@@ -2,8 +2,9 @@ import {ShoppingCart, UserCircle,LogOut} from 'lucide-react';
 import { Link,useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
-
+import Logo from './Logo.jsx';
 import { useContext } from 'react';
+
 
 const Navigation = () => {
   const {itemCount,message,setCart}=useContext(CartContext)
