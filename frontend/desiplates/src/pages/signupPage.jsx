@@ -88,7 +88,7 @@ const SignUp = () => {
 
 
                     <div>
-                        <label className="block text-sm font-bold text-slate-700 mg-2 ml-1">Password</label>
+                        <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Password</label>
                         <div className="relative">
                             <input
                                 type={showPassword ? "text" : "password"}
