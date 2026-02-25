@@ -61,11 +61,11 @@ const HeroFilter = () => {
         <div className="max-w-7xl mx-auto px-6 py-10 font-sans">
             <div className="bg-[#fdf6ed] p-8 rounded-[40px] shadow-sm border border-orange-50">
                 {/*Top row : search,state,mealtime */}
-                <div className="flex flex-wrap items-end gap-6 mb-8 justify-between"> 
+                <div className="flex flex-col  gap-6 mb-8 justify-between"> 
                     <div className="w-full lg:flex-[2] lg:min-w-[350px]">
                           <SearchBar inputValue={inputValue} setInputValue={setInputValue}/>   
                      </div> 
-                <div className="flex w-full gap-4 lg:flex-1 lg:min-w-[180px]">
+                <div className="flex flex-col sm:flex-row w-full gap-4 lg:flex-1 ">
                     <div className="flex-1 ">
                           <StateSelector stateMeal={stateMeal} setStateMeal={setStateMeal}/> 
                     </div>
