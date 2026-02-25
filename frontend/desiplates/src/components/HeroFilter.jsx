@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import StateSelector from "./StateSelector";
 import MealTime from "./MealTime";
 const HeroFilter = () => {
-   const {setVegBtn,vegBtn,nonVegBtn,setNonVegBtn,setCurriesBtn,curriesBtn,dessertBtn,setDessertBtn,setVisibleCount,handleClearAll}=useContext(DishContext)
+   const {setVegBtn,setNonVegBtn,setCurriesBtn,setDessertBtn,setVisibleCount,handleClearAll}=useContext(DishContext)
 
     const [activeCategory,setActiveCategory]=useState("Veg");
     const[isRefreshing,setIsRefreshing]=useState(false);
@@ -62,20 +62,22 @@ const HeroFilter = () => {
             <div className="bg-[#fdf6ed] p-8 rounded-[40px] shadow-sm border border-orange-50">
                 {/*Top row : search,state,mealtime */}
                 <div className="flex flex-wrap items-end gap-6 mb-8 justify-between"> 
-                    <div className="flex-[2] min-w-[350px]">
+                    <div className="w-full lg:flex-[2] lg:min-w-[350px]">
                           <SearchBar inputValue={inputValue} setInputValue={setInputValue}/>   
                      </div> 
-                    <div className="flex-1 min-w-[180px]">
+                <div className="flex w-full gap-4 lg:flex-1 lg:min-w-[180px]">
+                    <div className="flex-1 ">
                           <StateSelector stateMeal={stateMeal} setStateMeal={setStateMeal}/> 
                     </div>
-                    <div className="flex-1 min-w-[180px]">
+                    <div className="flex-1 ">
                          <MealTime mealTime={mealTime} setMealTime={setMealTime}/>
-                    </div>                              
+                    </div>  
+                </div>                            
                            
                 </div>
                 <div className="flex flex-col items-center justify-center w-full">
                     <label className="block text-sm font-bold text-slate-800 mb-2 ml-2">Food Category:</label>
-                    <div className="flex items-center justify-center gap-4 w-full max-w-4xl mx-auto">
+                    <div className="flex items-center justify-center gap-3 w-full max-w-4xl mx-auto overflow-x-auto pb-2 no-scrollbar">
                     <div className="bg-white rounded-full p-1.5 flex gap-1 border-slate-100 shadow-sm w-full max-w-md flex-shrink-0">
                     <button
                      onClick={()=>{
@@ -114,7 +116,7 @@ const HeroFilter = () => {
                         Desserts
                     </button>
                    </div>
-                   <button className="p-3 bg-white rounded-full border border-slate-100 shadow-sm hover:bg-slate-50 transition-all active:slate-90 cursor-pointer group" title="Refresh Filters"
+                   <button className="p-3 flex-shrink-0 bg-white rounded-full border border-slate-100 shadow-sm hover:bg-slate-50 transition-all active:slate-90 cursor-pointer group" title="Refresh Filters"
                    onClick={()=>{
                     setIsRefreshing(true);
                     handleResetAll()
