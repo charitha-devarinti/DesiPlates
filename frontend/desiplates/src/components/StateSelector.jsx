@@ -13,7 +13,7 @@ const StateSelector = ({stateMeal,setStateMeal}) => {
     }
 
     return ( 
-         <div className="w-64">
+         <div className="w-full">
                     <label htmlFor="place" className="block text-sm font-bold text-slate-800 mb-2 ml-2">Sort By Place: </label>
                     <div className="relative">
                         <select id="place" className="w-full appearance-none bg-white border border-slate-200 rounded-full px-5 py-3.5 text-slate-700 font-medium cursor-pointer shadow-sm cocus:ring-2 focus:ring-brand-primary/20 outline-none"

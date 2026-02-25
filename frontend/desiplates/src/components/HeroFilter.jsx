@@ -61,15 +61,18 @@ const HeroFilter = () => {
         <div className="max-w-7xl mx-auto px-6 py-10 font-sans">
             <div className="bg-[#fdf6ed] p-8 rounded-[40px] shadow-sm border border-orange-50">
                 {/*Top row : search,state,mealtime */}
-                <div className="flex flex-col lg:flex-row  gap-3 mb-8  w-full items-center justify-center "> 
-                    <div className="w-full lg:w-1/2">
+                <div className="grid  grid-cols-1  lg:grid-cols-12 gap-4 mb-8  w-full items-end  "> 
+                <div className="lg:col-span-6 w-full ">
+                    <div className="hidden lg:block h-7 "></div>
+                    
                           <SearchBar inputValue={inputValue} setInputValue={setInputValue}/>   
-                     </div> 
-                <div className="flex flex-col sm:flex-row  gap-4 lg:w-1/2 ">
-                    <div className="flex-1">
+                     
+                </div> 
+                <div className="lgLcol-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+                    <div className="w-full">
                           <StateSelector stateMeal={stateMeal} setStateMeal={setStateMeal}/> 
                     </div>
-                    <div className="flex-1">
+                    <div className="w-full">
                          <MealTime mealTime={mealTime} setMealTime={setMealTime}/>
                     </div>  
                 </div>                            

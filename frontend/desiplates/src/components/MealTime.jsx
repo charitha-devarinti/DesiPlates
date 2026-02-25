@@ -15,7 +15,7 @@ const MealTime = ({mealTime,setMealTime}) => {
  }
 
     return (
-        <div className="w-60 relative">
+        <div className="w-full relative">
             <label className="block text-sm font-bold text-slate-800 mb-2 ml-2"> Meal-Time Filter:</label>
             <div className="relative">
                 <select id="place" className="w-full appearance-none bg-white border border-slate-200 rounded-full px-5 py-3.5 text-slate-700 font-medium cursor-pointer shadow-sm cocus:ring-2 focus:ring-brand-primary/20 outline-none"
