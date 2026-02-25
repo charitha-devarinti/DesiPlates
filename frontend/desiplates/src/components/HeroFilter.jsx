@@ -63,19 +63,19 @@ const HeroFilter = () => {
                 {/*Top row : search,state,mealtime */}
                 <div className="grid  grid-cols-1  lg:grid-cols-12 gap-4 mb-8  w-full items-end  "> 
                 <div className="lg:col-span-6 w-full ">
-                    <div className="hidden lg:block h-7 "></div>
+                    <div className="hidden lg:block h-[28px] "></div>
                     
                           <SearchBar inputValue={inputValue} setInputValue={setInputValue}/>   
                      
                 </div> 
-                <div className="lgLcol-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+               
                     <div className="w-full">
                           <StateSelector stateMeal={stateMeal} setStateMeal={setStateMeal}/> 
                     </div>
                     <div className="w-full">
                          <MealTime mealTime={mealTime} setMealTime={setMealTime}/>
                     </div>  
-                </div>                            
+                                           
                            
                 </div>
                 <div className="flex flex-col items-center justify-center w-full">
