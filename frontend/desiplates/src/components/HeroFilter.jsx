@@ -61,7 +61,7 @@ const HeroFilter = () => {
         <div className="max-w-7xl mx-auto px-6 py-10 font-sans">
             <div className="bg-[#fdf6ed] p-8 rounded-[40px] shadow-sm border border-orange-50">
                 {/*Top row : search,state,mealtime */}
-                <div className="flex flex-col lg:flex-row items-stretch gap-3 mb-8 justify-between w-full "> 
+                <div className="flex flex-col lg:flex-row  gap-3 mb-8  w-full items-center justify-center "> 
                     <div className="w-full lg:w-1/2">
                           <SearchBar inputValue={inputValue} setInputValue={setInputValue}/>   
                      </div> 
