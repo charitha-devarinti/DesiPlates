@@ -69,10 +69,10 @@ const HeroFilter = () => {
                      
                 </div> 
                
-                    <div className="w-full">
+                    <div className="w-full lg:col-span-3">
                           <StateSelector stateMeal={stateMeal} setStateMeal={setStateMeal}/> 
                     </div>
-                    <div className="w-full">
+                    <div className="w-full lg:col-span-3">
                          <MealTime mealTime={mealTime} setMealTime={setMealTime}/>
                     </div>  
                                            
