@@ -5,11 +5,12 @@ import { Search } from "lucide-react"
 import SkeletonCard from "./Spinner";
 
 const Foodgrid = () => {
-    const { dishes, totalDishes, showMore, error, loading, setCurrentPage, currentPage } = useContext(DishContext);
+    const { dishes, totalDishes, error, loading, setCurrentPage, currentPage } = useContext(DishContext);
     const finalArray = dishes;
-    const hasMore = dishes.length < totalDishes
+    //const hasMore = dishes.length < totalDishes
     const limit = 12
     const totalPages = Math.ceil(totalDishes / limit);
+    const buttonsStart=
 
 
     return (
@@ -80,7 +81,7 @@ const Foodgrid = () => {
                                 return (
                                     <button className={`border-2 px-5 py-2 rounded-2xl border-orange-400 cursor-pointer hover:bg-orange-300 hover:text-white transition all ${currentPage === page
                                             ? "bg-orange-600 text-white border-orange-600 shadow-md"
-                                            : "border-orange-400 text-black-500 hover:bg-orange-600 hover:text-white"
+                                            : "border-orange-400 text-black-500 hover:bg-orange-300 hover:text-white"
 
                                         }`}
                                         key={n} onClick={() => setCurrentPage(page)}>{page}</button>
