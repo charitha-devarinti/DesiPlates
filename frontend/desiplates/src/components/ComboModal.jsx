@@ -91,7 +91,7 @@ const ComboModel = () => {
                         ${
                             isAdding
                             ? 'bg-green-500 text-white shadow-green-100'
-                            :'bg-orange-600 hover:bg-orange-700 text-white shadow-orange-200 '
+                            :'bg-orange-50 hover:bg-orange-700 text-black shadow-orange-200 border-2 border-orange-600 hover:text-white'
                         }    
                         `}
                     >

@@ -132,7 +132,7 @@ const FoodCard = ({dish}) => {
                 ? 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
                 :isAdding
                   ?'bg-green-500 text-white cursor-wait'
-                  :'bg-orange-600 hover:bg-orange-700 text-white shadow-lg shadow-orange-100 hover:shadow-orange-200'
+                  :'bg-orange-50 hover:bg-orange-700 text-orange shadow-lg shadow-orange-50 hover:shadow-orange-200 hover:text-white border-2 border-orange-600'
             }`}
             > 
             {isAdding?(

@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { DishContext } from "../context/DishContext";
 import FoodCard from "./FoodCard";
 import { Search } from "lucide-react"
@@ -6,11 +6,14 @@ import SkeletonCard from "./Spinner";
 
 const Foodgrid = () => {
     const { dishes, totalDishes, error, loading, setCurrentPage, currentPage } = useContext(DishContext);
+    const [currentButton,setCurrentButton]=useState(0)
     const finalArray = dishes;
     //const hasMore = dishes.length < totalDishes
-    const limit = 12
+    const limit = 12;
+    const buttonLimit=5
     const totalPages = Math.ceil(totalDishes / limit);
-    const buttonsStart=
+    const buttonsStart=currentButton*buttonLimit;
+    const buttonEnd=buttonsStart+buttonLimit
 
 
     return (
@@ -67,16 +70,16 @@ const Foodgrid = () => {
                     <div className="flex flex-wrap justify-center  items-center gap-2 mt-8 mb-12 ">
 
                         <button
-                            disabled={currentPage === 1}
+                            disabled={currentButton === 0}
                             className="px-4 py-2 rounded-lg border-2 border-orange-400 text-orange-600 font-bold disabled:opacity-30 disabled:cursor-not-allowed hover:bg-orange-50 transition-all cursor-pointer"
-                            onClick={() => setCurrentPage(currentPage - 1)}
+                            onClick={() => setCurrentButton(currentButton-1)}
                         >
                             Previous
                         </button>
 
                         {
 
-                            [...Array(totalPages).keys()].map((n) => {
+                            [...Array(totalPages).keys()].slice(buttonsStart,buttonEnd).map((n) => {
                                 const page = n + 1;
                                 return (
                                     <button className={`border-2 px-5 py-2 rounded-2xl border-orange-400 cursor-pointer hover:bg-orange-300 hover:text-white transition all ${currentPage === page
@@ -94,9 +97,9 @@ const Foodgrid = () => {
                         }
 
                         <button
-                            disabled={currentPage === totalPages}
+                            disabled={(buttonEnd-1)=== totalPages}
                             className="px-4 py-2 rounded-lg border-2 border-orange-400 text-orange-600 font-bold disabled:opacity-30 disabled:cursor-not-allowed hover:bg-orange-50 transition-all cursor-pointer"
-                            onClick={() => setCurrentPage(currentPage + 1)}
+                            onClick={() => setCurrentButton(currentButton+1)}
                         >
                             Next
                         </button>
