@@ -3,13 +3,13 @@ import { DishContext } from "../context/DishContext";
 import { useContext } from "react";
 
 const StateSelector = ({stateMeal,setStateMeal}) => {
-    const {setStateSelector,setVisibleCount}=useContext(DishContext)
+    const {setStateSelector,setCurrentPage}=useContext(DishContext)
     
     const handleStateMeal=(e)=>{
          const value_res=e.target.value;
          setStateMeal(value_res)
          setStateSelector(value_res)
-         setVisibleCount(0)
+         setCurrentPage(1)
     }
 
     return ( 

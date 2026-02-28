@@ -4,13 +4,13 @@ import { useContext } from "react";
 
 
 const MealTime = ({mealTime,setMealTime}) => {
-  const {setMealSelector,setVisibleCount}=useContext(DishContext)
+  const {setMealSelector,setCurrentPage}=useContext(DishContext)
 
  const handleMealTime=(e)=>{
    const mealValue=e.target.value;
    setMealTime(mealValue)
    setMealSelector(mealValue)
-   setVisibleCount(0)
+   setCurrentPage(1)
 
  }
 

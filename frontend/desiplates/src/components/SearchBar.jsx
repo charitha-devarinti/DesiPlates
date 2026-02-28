@@ -4,11 +4,11 @@ import { useContext } from "react";
 
 
 const SearchBar = ({inputValue,setInputValue}) => {
-    const {setUserInput,setVisibleCount,setNonVegBtn,setCurriesBtn,setVegBtn,setDessertBtn}=useContext(DishContext)
+    const {setUserInput,setCurrentPage,setNonVegBtn,setCurriesBtn,setVegBtn,setDessertBtn}=useContext(DishContext)
 
     const handleSearch=()=>{
       console.log('clieked')
-      setVisibleCount(0);
+      setCurrentPage(1);
       setVegBtn(false);
       setNonVegBtn(false);
       setCurriesBtn(false);
@@ -19,7 +19,7 @@ const SearchBar = ({inputValue,setInputValue}) => {
     const handleClear=()=>{
       setInputValue('');
       setUserInput('');
-      setVisibleCount(0)
+      setCurrentPage(1)
     }
     
     return ( 

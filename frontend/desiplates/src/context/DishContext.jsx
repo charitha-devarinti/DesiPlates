@@ -19,6 +19,7 @@ export function DishProvider({children}){
     const [mealSelector,setMealSelector]=useState('');
     const [masterDishList,setMasterDishList]=useState([]);
     const [focusedDish,setFocusedDish]=useState(null);
+    const [currentPage,setCurrentPage]=useState(1)
   
     
     const limit=12;
@@ -74,9 +75,10 @@ export function DishProvider({children}){
             setLoading(true)
             try{
 
+                let skipValue=(currentPage -1 )*limit
                 let params=new URLSearchParams({
                     limit:12,
-                    skip:visibleCount
+                    skip:skipValue
                 })
 
                 if(userInput){
@@ -107,11 +109,11 @@ export function DishProvider({children}){
               const result=await res.json();
               if(result.status=='ok'){
 
-                if(visibleCount===0){
+                if(currentPage===1){
                     setDishes(result.data)
-                }else{
-                    setDishes(prev=>[...prev,...result.data])
                 }
+                setDishes(result.data)
+                
                 setTotalDishes(result.total)
               }
              
@@ -126,10 +128,10 @@ export function DishProvider({children}){
 
         fetchDishes()
 
-    },[visibleCount,userInput,vegBtn,nonVegBtn,curriesBtn,dessertBtn,stateSlector,mealSelector])
+    },[visibleCount,userInput,vegBtn,nonVegBtn,curriesBtn,dessertBtn,stateSlector,mealSelector,currentPage])
 
     return(
-        <DishContext.Provider value={{dishes,loading,error,visibleCount,setVisibleCount,showMore,vegBtn,setVegBtn,nonVegBtn,setNonVegBtn,curriesBtn,setCurriesBtn,dessertBtn,setDessertBtn,stateSlector,setStateSelector,mealSelector,setMealSelector,handleClearAll,totalDishes,setUserInput,masterDishList,getDishById,focusedDish,setFocusedDish}}>
+        <DishContext.Provider value={{dishes,loading,error,visibleCount,setVisibleCount,showMore,vegBtn,setVegBtn,nonVegBtn,setNonVegBtn,curriesBtn,setCurriesBtn,dessertBtn,setDessertBtn,stateSlector,setStateSelector,mealSelector,setMealSelector,handleClearAll,totalDishes,setUserInput,masterDishList,getDishById,focusedDish,setFocusedDish,setCurrentPage,currentPage}}>
             {children}
         </DishContext.Provider>
     )

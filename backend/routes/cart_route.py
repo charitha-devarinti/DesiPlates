@@ -77,7 +77,7 @@ async def update_quantity(cart_item_id:str,
     return {"status":"error","message":"Item not found"}
 
 @cart_router.delete("/delete/{cart_item_id}")
-async def delete_item(cart_item_id:str,current_user:str=Depends(get_current_user)  ):
+async def delete_item(cart_item_id:str,current_user:str=Depends(get_current_user)):
     obj_id=ObjectId(cart_item_id)
     result=await cart_collection.delete_one({
         "_id":obj_id,

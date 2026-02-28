@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import StateSelector from "./StateSelector";
 import MealTime from "./MealTime";
 const HeroFilter = () => {
-   const {setVegBtn,setNonVegBtn,setCurriesBtn,setDessertBtn,setVisibleCount,handleClearAll}=useContext(DishContext)
+   const {setVegBtn,setNonVegBtn,setCurriesBtn,setDessertBtn,setCurrentPage,handleClearAll}=useContext(DishContext)
 
     const [activeCategory,setActiveCategory]=useState("Veg");
     const[isRefreshing,setIsRefreshing]=useState(false);
@@ -20,7 +20,7 @@ const HeroFilter = () => {
         setNonVegBtn(false)
         setCurriesBtn(false)
         setDessertBtn(false)
-        setVisibleCount(0)
+        setCurrentPage(1)
     }
 
     const handleNonVeg=()=>{
@@ -28,7 +28,7 @@ const HeroFilter = () => {
         setNonVegBtn(prev=>!prev)
         setCurriesBtn(false)
         setDessertBtn(false)
-        setVisibleCount(0)
+        setCurrentPage(1)
     }
 
     const handleCurries=()=>{
@@ -36,7 +36,7 @@ const HeroFilter = () => {
         setNonVegBtn(false)
         setCurriesBtn(prev=>!prev)
         setDessertBtn(false)
-        setVisibleCount(0)
+        setCurrentPage(1)
         
     }
 
@@ -45,12 +45,12 @@ const HeroFilter = () => {
         setNonVegBtn(false)
         setCurriesBtn(false)
         setDessertBtn(prev=>!prev)
-        setVisibleCount(0)
+        setCurrentPage(1)
     }
 
     const handleResetAll=()=>{
         handleClearAll();
-        setVisibleCount(0);
+        setCurrentPage(1);
 
         setInputValue('')
         setStateMeal('')
