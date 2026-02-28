@@ -78,7 +78,7 @@ const Foodgrid = () => {
                             [...Array(totalPages).keys()].map((n) => {
                                 const page = n + 1;
                                 return (
-                                    <button className={`border-2 px-5 py-2 rounded-2xl border-orange-400 cursor-pointer hover:bg-orange-600 hover:text-white transition all ${currentPage === page
+                                    <button className={`border-2 px-5 py-2 rounded-2xl border-orange-400 cursor-pointer hover:bg-orange-300 hover:text-white transition all ${currentPage === page
                                             ? "bg-orange-600 text-white border-orange-600 shadow-md"
                                             : "border-orange-400 text-black-500 hover:bg-orange-600 hover:text-white"
 
